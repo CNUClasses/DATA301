@@ -1,0 +1,16 @@
+ctrl-enter #run cell
+
+cmd-m #change cell to markdown
+cmd-y #change cell to code
+cmd-a #add cell before
+cmd-b #add cell after
+cmd d,d #delete cell
+
+cmd-o       #hide output, edit Settings->Advanced Settings->Keyboard Shortcuts- add O and shift-O to User Preferences
+cmd-shift o # see https://www.py4u.net/discuss/140128 Answer 4
+
+cmd shift-L  #toggle line numbers, useful to pinpoint where error occurred
+
+Shift + Up Arrow select the current cell and the cell above
+Shift + Down Arrow select the current cell and the cell below
+Shift + m merge selected cells

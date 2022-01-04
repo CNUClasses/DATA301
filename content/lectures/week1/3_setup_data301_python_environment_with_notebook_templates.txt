@@ -1,0 +1,27 @@
+#The following commands walk you through setting up a virtual environment 
+#run these at a command line
+conda update -n base conda                   #update anaconda
+conda create -n data301 python=3.9 anaconda  #create a new environment
+conda activate data301                       #switch to it
+
+#optional: edit .bashrc file to automatically start this environment
+#add following line to end of .bashrc file 
+#conda activate data301
+
+#at this point you can launch jupyter lab, it will use the python defined in data301
+jupyter lab
+
+#if you want to use templates for your notebooks, then run these in data301
+conda install nodejs -c conda-forge --repodata-fn=repodata.json  #this is for the templates that I will use
+pip install jupyterlab_templates             #these are the templates
+jupyter labextension install jupyterlab_templates
+jupyter serverextension enable --py jupyterlab_templates
+
+#where are the jupyter templates in data301? Find and edit them so they do what you want.  
+# type this at command line to find on linux
+#find ~ -type d -name "jupyterlab_templates"
+#On my machine they are located at
+#/home/keith/anaconda3/envs/data301/lib/python3.9/site-packages/jupyterlab_templates/templates/jupyterlab_templates
+
+#when done with this environment exit with
+conda deactivate
