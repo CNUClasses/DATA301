@@ -176,11 +176,17 @@
        
             </td>
             <td class="style_white ">
+                Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. They are not meant for production environments since they require a human to run each cell.
+                If your notebook produces something, like a processed dataset, then it's a good idea to port it's relevant content to a script and or a package that requires no user interaction, and displays no UI. This has the following advantages:<br>
+                1. Ensures repeatable results since the script executes the same way every time<br>
+                2. Transforms your work into a process that can be triggered by an external server<br>
+                
+                The following shows you how to create a package which holds functions, classes and variables of interest.  And how to create a pipeline.  Both of which are useful when porting a notebook to a script. 
+                <br><br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Process Numerical Data</a></strong>scaling numerical data, apply this transform to the ordinal categorical variables as well<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Process Numerical Data</a></strong>scaling numerical data, apply this transform to the transformed ordinal categorical variables as well<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms to a dataframe.  Pipelines streamline pre-processing <br>
                    
-                
                     
                    
                 <!-- PCA example
