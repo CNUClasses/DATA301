@@ -176,10 +176,12 @@
        
             </td>
             <td class="style_white ">
-                Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. They are not meant for production environments since they require a human to run each cell.
-                If your notebook produces something, like a processed dataset, then it's a good idea to port it's relevant content to a script and or a package that requires no user interaction, and displays no UI. This has the following advantages:<br>
-                1. Ensures repeatable results since the script executes the same way every time<br>
-                2. Transforms your work into a process that can be triggered by an external server<br>
+                Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments on that data. They are not meant for production environments since they require a human to run each cell and they tend to display lots of UI.<br>
+                
+                If your notebook is purely exploratory, that is it only plots various aspects of data, then you need do nothing else. 
+                If however, your notebook produces something (like a processed dataset), then it's a good idea to port it's relevant content to a script that requires no user interaction, and displays no UI. This approach has the following advantages:<br>
+                1. It ensures repeatable results since the script executes the same way every time<br>
+                2. The script can be executed by another script, which means it can be a building block used in other processes.<br>
                 
                 The following shows you how to create a package which holds functions, classes and variables of interest.  And how to create a pipeline.  Both of which are useful when porting a notebook to a script. 
                 <br><br>
