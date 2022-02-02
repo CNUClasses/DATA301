@@ -176,11 +176,11 @@
        
             </td>
             <td class="style_white ">
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Process Numerical Data</a></strong>scaling numerical data, apply this transform to the transformed ordinal categorical variables as well<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Scaling Numerical Data</a></strong> After all categorical variables have been converted to numerical data, scale it with these transforms. (Note: this is required in order to use this data as input to many ML algorithms)<br><br>
                     
 
                             
-                The following shows you how to create a package which holds functions, classes and variables of interest.  Also how to create a pipeline.  Both of which are useful when porting a notebook to a script. 
+                These 2 notebooks demonstrate; using the package created in the left pane and pipelines.  Both are useful when porting a notebook to a script. 
                 <br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb" style="color: #00cc00"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms to a dataframe.  Pipelines streamline pre-processing <br>
@@ -193,12 +193,12 @@
                 2. The script can be executed by another script, which means it can be a building block used in other processes.<br><br>
                 
                 <strong>General steps for porting a jupyter notebook to a python script:</strong><br>
-                <ul>
-                Ignore all notebook code that explores the data (plotting with matplotlib, seaborn, various DataFrame statistics like unique and value_counts)<br>
-                Export relevant functions to a python file (idealy in a seperate package for maximum flexibility).<br>
-                Create a guarded section in the python file that runs only if it is executed as a script, not when it's imported as a module.  It will start with 'if __name__== "__main__":'<br>
-                Place all code that should run in this guarded section.<br>
-                </ul>
+                <ol>
+                <li>Ignore all notebook code that explores the data (plotting with matplotlib, seaborn, various DataFrame statistics like unique and value_counts)</li>
+                <li>Export relevant functions to a python file (idealy in a seperate package for maximum flexibility).</li>
+                <li>Create a guarded section in the python file that runs only if it is executed as a script, not when it's imported as a module.  It will start with 'if __name__== "__main__":'</li>
+                <li>Place all code that should run in this guarded section.</li>
+                </ol>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline' <br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
      
