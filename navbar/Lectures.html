@@ -192,7 +192,8 @@
                 1. It ensures repeatable results since the script always executes the same way.<br>
                 2. The script can be executed by another script, which means it can be a building block used in other processes.<br><br>
                 
-                <strong>General steps for porting a jupyter notebook to a python script:</strong><br>
+                <strong>General steps to port a jupyter notebook to a python script:</strong><br>
+                <!--discussed nbconvert and its drawbacks (exports all code when you only want non-ui code).  Before doing any of this write on the board-->
                 <ol>
                 <li>Ignore all notebook code that explores the data (plotting with matplotlib, seaborn, various DataFrame statistics like unique and value_counts)</li>
                 <li>Export relevant functions to a python file (idealy in a seperate package for maximum flexibility).</li>
@@ -201,8 +202,9 @@
                 </ol>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline' <br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
-     
-                    
+                <br>See recipes 9.1 and 10.3 for PCA and Removing highly correlated features<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature reduction</a></strong>Removing highly correlated features and PCA for feature reduction<br><br>
+                  
                 <!-- PCA example -->
             </td>
         </tr>
