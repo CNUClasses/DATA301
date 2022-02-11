@@ -217,28 +217,40 @@
                 <strong>Lectures</strong><BR>
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
-                                   
+                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/kmeans_in_class_notes_for_board.pdf">BOARDWORK NOTES:kmeans clustering, elbow method, silhouette score</a></strong><br>
+                     <ul><strong>Kmeans considerations</strong>
+                        <li>is very fast O(n)</li>
+                        <li>is vulnerable to outliers</li>  
+                        <li>works best with spherical clusters</li> 
+                        <li>must know how many clusters before you run algorithm (use elbow method or silhouette score to calculate</li>
+                        <li>not guranteed to produce the same result every run (it depends on initial cluster centers)</li>
+                     </ul>
+                     <br>              
                 <br><strong>References</strong><BR>
                     <!-- FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
                     <!-- kmeans and heiarchical intro-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=blog&utm_medium=beginners-guide-hierarchical-clustering -->
-                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well, uses distance between points. Tends to produce roundish clusters<br>
+                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
                     <!-- tuning DBSCAN and HDBSCAN and OPTICS http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/ -->
-                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well, uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
+                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
                     <!-- <strong><a href="https://www.youtube.com/watch?v=7xHsRkOdVwo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=37">StatQuest: Heiarchical Clustering</a>  If I cover it<br> -->
                     <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
+                    <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"> scikit-learn KMeans</a></strong> 
+                    Sample code and methods, pay attention to fit, predict (for new data), inertia_ (quality measure, sum of squared distances of samples to closest cluster center). Consider using the KMeans++ method to initialize cluster centers to the K points furthest from one another<br>
+                    <strong><a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html"> Selecting the number of clusters with silhouette analysis</a></strong> 
+                    
                     
                  <br><strong>Homework</strong><BR>
-                  
+                 See if you can use numpy to vectorize the function get_distances(dims): in 51_curse_of_dimensionality.ipynb <br>
+
             </td>
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/51_curse_of_dimensionality.py">The curse of dimensionality</a></strong> Shows how data that is tightly clustered in low dimensions becomes sparse as dimensionality increases. 
                   This phenomena makes it harder to train ML models, and is why dimensionality reduction is so important.<br> Also has some interesting interactive plots.
-                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm<br><br>
+                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
              
             </td>
         </tr>
-
-
+        
 
         <!-- <tr>
             <td class="style_white "><em>5</em></td>
