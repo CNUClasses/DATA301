@@ -219,11 +219,12 @@
                      with an emphasis on introducing unsupervised, clustering techniques<br>
                      <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/kmeans_in_class_notes_for_board.pdf">BOARDWORK NOTES:kmeans clustering, elbow method, silhouette score</a></strong><br>
                      <ul><strong>Kmeans considerations</strong>
-                        <li>is very fast O(n)</li>
-                        <li>is vulnerable to outliers</li>  
-                        <li>works best with spherical clusters</li> 
-                        <li>must know how many clusters before you run algorithm (use elbow method or silhouette score to calculate</li>
-                        <li>not guranteed to produce the same result every run (it depends on initial cluster centers)</li>
+                        <li>Is fast, O(n)</li>
+                        <li>Minimizes the sum of distances from each point and its nearest cluster.</li>
+                        <li>Is vulnerable to outliers.  It classifies every point, so outliers can have large effect on cluster center)</li>  
+                        <li>Works best with spherical clusters</li> 
+                        <li>Must know how many clusters before you run algorithm (use elbow method or silhouette score to estimate)</li>
+                        <li>Is not guranteed to produce the same result every run (it depends on initial cluster centers)</li>
                      </ul>
                      <br>              
                 <br><strong>References</strong><BR>
@@ -257,20 +258,23 @@
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week6/DBScan_in_class_notes_for_board.pdf">DBSCAN algorithm overview</a></strong>
                     <br>
                     <ul><strong>DBSCAN considerations</strong>
-                        <li>is very fast O(n)</li>
-                        <li>is not vulnerable to outliers</li>  
-                        <li>performs poorly when clusters overlap</li> 
-                        <li>must set eps and min_samples (See accompanying notebook to the right for estimating eps)</li>
-                        <li>not guaranteed to produce the same result every run (it depends on which cluster algorithm starts with)</li>
+                        <li>Is fast, O(n)</li>
+                        <li>Finds dense regions in data</li>
+                        <li>Finds arbitraily shaped clusters</li>
+                        <li>Is not vulnerable to outliers</li>  
+                        <li>Performs poorly when clusters overlap (performs best when dense areas are separated by sparse areas)</li> 
+                        <li>Must set eps and min_samples (See accompanying notebook estimating eps) but not the number of clusters</li>
+                        <li>Is not guaranteed to produce the same result every run (after classifying core-points, it depends on which cluster the algorithm randomly chooses first)</li>
                      </ul><br>
-            
-                                     
+                          
                 <br><strong>References</strong><BR>
                     <!-- https://www.scikit-yb.org/en/latest/api/model_selection/index.html yellowbrick visualizers, also feature importance -->
                     <strong><a href="https://www.scikit-yb.org/en/latest/api/cluster/index.html">Yellowbrick Visualizers</a></strong> 
                     Elbow method, Silhouette, and Intercluster distance maps - work with KMeans<br>
                     <strong><a href=" https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012">Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra</a></strong> 
-                    Discusses how to calculate eps in DBSCAN<br>  
+                    Discusses how to calculate eps in DBSCAN<br> 
+                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms
+                    </a> </strong>What if you don’t know much about your data? What algorithm is good for exploratory data analysis (EDA)?<br>
                 <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
