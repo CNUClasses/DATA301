@@ -225,9 +225,12 @@
                         <li>Works best with spherical clusters</li> 
                         <li>Must know how many clusters before you run algorithm (use elbow method or silhouette score to estimate)</li>
                         <li>Is not guranteed to produce the same result every run (it depends on initial cluster centers)</li>
-                     </ul>
-                     <br>              
+                     </ul>              
                 <br><strong>References</strong><BR>
+                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms</a>A MUST READ: </strong>compares 7 clustering algorithms on a messy dataset. Assesses each according to performence metrics given <a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html#some-rules-for-eda-clustering">here </a>. 
+                        Emphasizes 'being right' since, for dimensions >3, you cannot visually confirm results by plotting.</a><br>
+                    
+                    
                     <!-- FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
                     <!-- kmeans and heiarchical intro-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=blog&utm_medium=beginners-guide-hierarchical-clustering -->
                     <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
@@ -240,7 +243,7 @@
                     <strong><a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html"> Selecting the number of clusters with silhouette analysis</a></strong> 
                     
                     
-                 <br><strong>Homework</strong><BR>
+                 <br><br><strong>Homework</strong><BR>
                  See if you can use numpy to vectorize the function get_distances(dims): in 51_curse_of_dimensionality.ipynb <br>
 
             </td>
@@ -265,16 +268,18 @@
                         <li>Performs poorly when clusters overlap (performs best when dense areas are separated by sparse areas)</li> 
                         <li>Must set eps and min_samples (See accompanying notebook estimating eps) but not the number of clusters</li>
                         <li>Is not guaranteed to produce the same result every run (after classifying core-points, it depends on which cluster the algorithm randomly chooses first)</li>
-                     </ul><br>
+                     </ul>
                           
                 <br><strong>References</strong><BR>
+                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/performance_and_scalability.html">Benchmarking Performance and Scaling of Python Clustering Algorithms</a></strong>Examines 11 algorithms. 
+                    The plot labeled 'Performance Comparison of Clustering Implementations' illustrates how these algorithms perform against each other. <br> 
                     <!-- https://www.scikit-yb.org/en/latest/api/model_selection/index.html yellowbrick visualizers, also feature importance -->
                     <strong><a href="https://www.scikit-yb.org/en/latest/api/cluster/index.html">Yellowbrick Visualizers</a></strong> 
                     Elbow method, Silhouette, and Intercluster distance maps - work with KMeans<br>
                     <strong><a href=" https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012">Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra</a></strong> 
                     Discusses how to calculate eps in DBSCAN<br> 
                     <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms
-                    </a> </strong>What if you don’t know much about your data? What algorithm is good for exploratory data analysis (EDA)?<br>
+                    </a> </strong>What if you don’t know much about your data? What algorithm is good for exploratory data analysis (EDA)? Pay attention to 'Some rules for EDA clustering' section<br>
                 <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
