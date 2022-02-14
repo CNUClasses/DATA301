@@ -255,7 +255,14 @@
             <td class="style_white ">
                 <strong>Lectures</strong><BR>  
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week6/DBScan_in_class_notes_for_board.pdf">DBSCAN algorithm overview</a></strong>
-                    See accompanying notebook to the right<br>
+                    <br>
+                    <ul><strong>DBSCAN considerations</strong>
+                        <li>is very fast O(n)</li>
+                        <li>is not vulnerable to outliers</li>  
+                        <li>performs poorly when clusters overlap</li> 
+                        <li>must set eps and min_samples (See accompanying notebook to the right for estimating eps)</li>
+                        <li>not guaranteed to produce the same result every run (it depends on which cluster algorithm starts with)</li>
+                     </ul><br>
             
                                      
                 <br><strong>References</strong><BR>
