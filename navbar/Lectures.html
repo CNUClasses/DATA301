@@ -217,6 +217,7 @@
                 <strong>Lectures</strong><BR>
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
+                     <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is. Includes all clustering algorithms</mak></B><br>
                      <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/kmeans_in_class_notes_for_board.pdf">BOARDWORK NOTES:kmeans clustering, elbow method, silhouette score</a></strong><br>
                      <ul><strong>Kmeans considerations</strong>
                         <li>Is fast, O(n)</li>
@@ -269,6 +270,10 @@
                         <li>Must set eps and min_samples (See accompanying notebook estimating eps) but not the number of clusters</li>
                         <li>Is not guaranteed to produce the same result every run (after classifying core-points, it depends on which cluster the algorithm randomly chooses first)</li>
                      </ul>
+                <strong style="color: #cc0000">Test, 2/25/22.  Includes everything through 2/21/22.  <BR>
+                The test will be hosted on gitlab and scholar<br>
+                </strong> <br> 
+        
                           
                 <br><strong>References</strong><BR>
                     <strong><a href="https://hdbscan.readthedocs.io/en/latest/performance_and_scalability.html">Benchmarking Performance and Scaling of Python Clustering Algorithms</a></strong>Examines 11 algorithms. 
@@ -280,13 +285,34 @@
                     Discusses how to calculate eps in DBSCAN<br> 
                     <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms
                     </a> </strong>What if you don’t know much about your data? What algorithm is good for exploratory data analysis (EDA)? Pay attention to 'Some rules for EDA clustering' section<br>
-                <br><strong>Homework</strong><BR>                 
+                    <!--detailed copy verses view https://www.dataquest.io/blog/settingwithcopywarning/ -->
+                    <strong><a href="https://www.practicaldatascience.org/html/views_and_copies_in_pandas.html">Views and Copies in pandas</a></strong>
+                        Subsetting DataFrames in pandas will sometimes generate views, and sometimes copies.  It depends on the structure of the dataframe, and, if modifying, the kind of modification.  To be safe follow these rules; <b>"If you make a slice for any purpose other than immediately analyzing, you should add .copy() to that slice"</b><br>
+                   
+                    <br><strong>Homework</strong><BR> 
+                    See sections 2.2,3.0 and 3.1 in <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/64_inclass_cluster_example.ipynb">In class Clustering example</a>                
             </td>
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/62_dbscan.ipynb">DBSCAN</a></strong> 
                 Example, also how to use sklearns NearestNeighbor and kneed to calculate eps.<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix</a></strong><br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/64_inclass_cluster_example.ipynb">In class Clustering example</a></strong>From data pre processing to plotting<br>
+                
             </td>
         </tr> 
+
+        <tr>
+            <td class="style_white "><em>7</em></td>
+            <td class="style_white ">
+                <br><B><mark>Supervised Learning - Use when you do know what the right answer is. </make> Algorithms include regressions, decision trees, random forest, all neural network varieties</B><br>
+                <strong>Lectures</strong><BR>                    
+                <br><strong>References</strong><BR>
+                <br><strong>Homework</strong><BR>                 
+            </td>
+            <td class="style_white ">
+            </td>
+        </tr> 
+        
 
         <!-- <tr>
             <td class="style_white "><em>5</em></td>
