@@ -95,6 +95,7 @@
                 seaborn (fewer lines to plot)<br>
                 plotly (interactive plots)<br><br>
 
+                need extensive review of apply, map, and group_by on dataframes, see https://towardsdatascience.com/avoiding-apply-ing-yourself-in-pandas-a6ade4569b7f
 
                 missing data- find it, average? closest (how?), predict with a model?<br>
                 create artificial dataset with height weight, tshirt sizes.  Delete 10% of sizes, fit linear regression on remaining sizes, predict missing<br>
@@ -162,6 +163,7 @@
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week4/41_create_an_importable_package.pdf" style="color: #00cc00">Turn utils.py into a package</a></strong> utils.py is a module which can be accessed directly from python files in the same folder. In order to get to it from other folders it must be converted to a package, here is a simple way to do that.<br>
                     
                  <br><strong>References</strong><BR>
+                 
                     <strong><a href="https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355 ">Python Packages tutorial</a></strong>Does not include namespace packages<br>
                     <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pipelines- a way to iteratively apply a list of functions to a dataframe</a></strong>An excellent way to simplify and streamline data pre processing.<br>
                     <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), Step-by-Step</a></strong>For those of you who want more information on PCA<br>
@@ -215,6 +217,7 @@
             <td class="style_white "><em>5</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>
+                       <!--UMAP for clustering?-->
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
                      <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is. Includes all clustering algorithms</mak></B><br>
@@ -307,6 +310,7 @@
                 <br><B><mark>Supervised Learning - Use when you do know what the right answer is. </make> Algorithms include regressions, decision trees, random forest, all neural networks</B><br>
                 <strong>Lectures</strong><BR> 
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week7/71_supervised_split_dataset.pdf">Supervised - Train/Test splits</a></strong><br>
+                    <!-- Do the math for linear regression on board -->
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week7/72_training_OLS_linear_regression.pdf">Ordinary Least Squares - Linear Regression</a></strong><br>
  
                 
@@ -317,12 +321,26 @@
                     <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
+                <!--71_  uses np.vectorize-->
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb">Splitting a dataset</a></strong> <br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb">OLS Linear Regression</a></strong>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb">OLS Linear Regression</a></strong><br>
+                <strong ><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/test/test1_SOLUTION/test1_cluster_SOLUTION.ipynb" style="color: #cc0000">Test 1 SOLUTION</a></strong>
   
             </td>
         </tr> 
-        
+        <tr>
+            <td class="style_white "><em>8</em></td>
+            <td class="style_white ">
+                <strong>Lectures</strong><BR>                    
+                <br><strong>References</strong><BR>
+                    <strong><a href="https://www.youtube.com/watch?v=7VeUPuFGJHk">StatQuest: Decision Trees</a></strong>Very good explanation of how to choose the next feature to split on based on information gain<br>
+                   
+                    
+                <br><strong>Homework</strong><BR>                 
+            </td>
+            <td class="style_white ">
+            </td>
+        </tr>
 
         <!-- <tr>
             <td class="style_white "><em>5</em></td>
