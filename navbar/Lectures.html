@@ -93,6 +93,8 @@
                 New:<br>
                 something new, joining (very similar to databases inner and outter join)<br>
                 seaborn (fewer lines to plot)<br>
+                seaborn scatterplots-use alpha value when plotting lots of points, this makes the plot show as a kind of heat map with densly populated areas being darker
+                use interpolation to find hidden features, find correlated column, sort by it and interpolate missing values based on nearby rows
                 plotly (interactive plots)<br><br>
 
                 need extensive review of apply, map, and group_by on dataframes, see https://towardsdatascience.com/avoiding-apply-ing-yourself-in-pandas-a6ade4569b7f
@@ -113,6 +115,21 @@
         <td class="style_white "><em>2</em></td>
             <td class="style_white ">
                 MLK Holiday <br>
+                <!--In Data Science you often start with a problem and work backwards, infilling the pieces you need, then its gathering data, stitching it together and implementing the components.
+                    Based on the music you like what other music can be reccomended to you?
+                    Drugs- clinical trials are expensive and there are a lot of drugs-  How do you select candidates for trial?   List of components, list of uses, effectiveness
+                    what you can see in data without predictions (melborne housing dataset, use to see where growth is happenning).  What else do you need?  Maybe prevaling interest rate feature.
+                     who owns that plane?  track planes by id, track people (and employer) by destination, match one to another, once you have that you know where they are going and when, 
+                     when did oligarchs know? - possible, track megayacht movements, look for deviations from the norm to safehavens, when this happened, they knew, same with planes
+                     how can I predict recidivism for people convicted of a crime?  What can be done to prevent it?
+                     What is the risk of civil war in a country? what to measure?  Political shift over time, hate speech (tweets, FB), weapon sales.  To that end I have a friend who is a complete hero, she was a professor of sociolgy here for years, she helps people become educated in gutemala, africa and nepal.  In 2007 she was in the kenyan bush during the ethnic conflicts, she said she used the machete index to determine if it was safe to go into town.  If the local hardware stores were out of machetes she stayed in the bush.
+                     Can you tell if an establishment is being used for money laundering? Say your the IRS and you have the yearly tax returns for a small business that does nails, nail shops are pretty common compare to others in the same area. Maybe determine average return on expenses, compare. 
+                     when am I going to die? what do you need for this, 
+                    Whats the best way to increase my chances of making friends?
+                    Whats the most effecient way to attack/starve an invading army? time series problem, Need sat images, Need ability to tally vehicles and troops, estimate fuel and food needs, track support staff.  Identify roads used.  What is the climate, what is the season.(winter, spring?).  Heavy equipment does not do well in mudd.  Overlay floodplain data, what if you block a river here? will supply routes flood.  What if you open a dam?  
+                     Image stuff
+                     your standing at Vernal falls in Yosemete and you want to take a picture with no one in it.  It's crowded - how do you do it?
+                    -->
                 <strong>References</strong><BR>
                     
                 <a href="https://www.kaggle.com/alexisbcook/inconsistent-data-entry"> Kaggle- text pre processing</a>Very good, especially the fuzzywuzzy module<br>              
@@ -165,6 +182,7 @@
                  <br><strong>References</strong><BR>
                  
                     <strong><a href="https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355 ">Python Packages tutorial</a></strong>Does not include namespace packages<br>
+                    <!--excellent tutorial  https://www.kaggle.com/alexisbcook/pipelines -->
                     <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pipelines- a way to iteratively apply a list of functions to a dataframe</a></strong>An excellent way to simplify and streamline data pre processing.<br>
                     <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), Step-by-Step</a></strong>For those of you who want more information on PCA<br>
                     <!-- https://www.youtube.com/watch?v=oRvgq966yZg -- if fewer samples than variables then the number of samples puts an upper bound on the number of PCs -->
@@ -215,6 +233,8 @@
         </tr>
         <tr>
             <td class="style_white "><em>5</em></td>
+            <!-- sample your dataset if it's huge to make it faster to iterate over development-->
+               
             <td class="style_white ">
                 <strong>Lectures</strong><BR>
                        <!--UMAP for clustering?-->
@@ -337,7 +357,9 @@
                 <br><strong>References</strong><BR>
                     <strong><a href="https://www.youtube.com/watch?v=7VeUPuFGJHk">StatQuest: Decision Trees</a></strong>Very good explanation of how to choose the next feature to split on based on information gain<br>
                     <!-- Just a good outline plus a plot of the decision regions <strong><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_iris.html#sphx-glr-auto-examples-ensemble-plot-forest-iris-py">Plot the decision surfaces of ensembles of trees on the iris dataset¶</a> -->
-                <br><strong>Homework</strong><BR> 
+                    <strong><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_ensemble_oob.html?highlight=randomforestclassifier">Out of Bag error </a></strong>Using rows that were not used to train each tree in a random forest to calculate that trees error, and then averaging these errors.<br>
+                   
+                    <br><strong>Homework</strong><BR>  
 
             </td>
             <td class="style_white ">
@@ -346,6 +368,35 @@
                  <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_8/82_RandomForest_OOB_intro_.ipynb">Random Forest and OOB scores</a></strong> <br>
             </td>
         </tr>
+        <tr>
+            <td class="style_white "><em>9</em></td>
+            <td class="style_white ">
+                <strong>Lectures</strong><BR> 
+                    <!--do RF demo
+                        they do RF
+                        compare to linear regression
+                        show where linear regression is better than random forest
+
+                        bias variance (validation verses training)
+                        hyperparameters
+                        tuning hyperparameters
+                    -->
+
+                <br><strong>References</strong><BR>
+                <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.<br>
+                <p>Random forest will not overfit by adding more trees, they will overfit based on other hyperparameters though.</p>
+                <strong><a href="https://youtu.be/fDQkUN9yw44"> Bias, Variance"></a></strong>How to see if your model overfits or underfits or is just right<br>
+                <!--cross validation-->
+                   
+                <br><strong>Homework</strong><BR> 
+
+            </td>
+            <td class="style_white ">
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_9/91_randomforest_INCLASS.ipynb">Estimate housing prices</a></strong> Using both random forest and decision trees. Evaluated using mean absolute error <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_9/91_randomforest_INCLASS_SOLUTION.ipynb">Estimate housing prices SOLUTION</a></strong> <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_9/92_randomforest_verses_regression.ipynb">Random forest verses regression</a></strong> When to use one over the other (almost always use RF).  RF failure - the extrapoltaion problem<br>            
+            </td>
+        </tr> 
 
         <!-- <tr>
             <td class="style_white "><em>5</em></td>
