@@ -372,20 +372,28 @@
             <td class="style_white "><em>9</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR> 
-                    <!--do RF demo
-                        they do RF
-                        compare to linear regression
-                        show where linear regression is better than random forest
-
-                        bias variance (validation verses training)
-                        hyperparameters
-                        tuning hyperparameters
-                    -->
+                <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week9/91_crossval_hyperparam_tune_trees.pdf">Cross Validation and hyperparameter tuning</a></strong>How to tune hyperparameters on a model to give optimal performence for a particular dataset<br>
+                
+                    
 
                 <br><strong>References</strong><BR>
-                <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.<br>
-                <p>Random forest will not overfit by adding more trees, they will overfit based on other hyperparameters though.</p>
-                <strong><a href="https://youtu.be/fDQkUN9yw44"> Bias, Variance"></a></strong>How to see if your model overfits or underfits or is just right<br>
+                <strong><a href="https://youtu.be/fDQkUN9yw44"> Bias, Variance</a></strong>How to see if your model overfits or underfits or is just right<br>
+                <!--get the bias variance targets, then graph then cross validation to tune hyperparameters (for RF), then train on full dataset (minus holdout) then the error-->
+                <!-- just the first graph showing training error and validation error  <strong><a href="https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9">The Bias-Variance Tradeoff</a><br> -->
+                <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.
+                A Random forest will not overfit by adding more trees, it will overfit based on other hyperparameters though. How to choose correct values for hyperparameters?  <br><br>
+               
+                You can use scikitlearn and optuna to do cross validation and hyperparameter tuning.  The best endorsement for Optuna is that it's very well respected and widely used by the cut throat data science competitors at Kaggle<br>
+                <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation">scikit-learn - cross validation</a><br>
+                    <!-- <strong><a href="https://scikit-learn.org/stable/modules/grid_search.html#grid-search">scikit-learn - hyper-parameter tuning</a><br>
+                    -->
+ 
+                <strong><a href="https://colab.research.google.com/github/optuna/optuna-examples/blob/main/quickstart.ipynb#scrollTo=-cWafqOdRghs">Optuna Example-hosted on Google Colab:  Selecting best hyperparameters for a Random Forest Classifier</a><br>
+                <!--Run the following notebook in class!  Its an excellent introduction-->
+                <strong><a href="https://www.kaggle.com/bextuychiev/no-bs-guide-to-hyperparameter-tuning-with-optuna">No BS Guide to Hyperparameter Tuning With Optuna</a>
+                <strong><a href=" https://optuna.org/">How to pass multiple arguments to Optunas objective function</a><br>     
+                <strong><a href=" https://optuna.org/">Optuna - home page </a><br>
+
                 <!--cross validation-->
                    
                 <br><strong>Homework</strong><BR> 
