@@ -52,6 +52,8 @@
         <tr>
             <td class="style_white "><em>1</em></td>
             <td class="style_white ">
+                <!--excellent notebooks, see sebastian raschke github https://github.com/rasbt/stat451-machine-learning-fs21.git -->
+                
                 <!--<ul><strong>Tools to help you keep track of research</strong>
                     <li>A note taking App (like evernote)</li>
                     <li>A web highlighter, to highlight and web pages (like Weava)</li>
@@ -384,7 +386,7 @@
                 A Random forest will not overfit by adding more trees, it will overfit based on other hyperparameters though. How to choose correct values for hyperparameters?  <br>
                 <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn cross validation</a></strong>A detailed explanation.  Pay attention to stratified cross validation, a way to use cross validation on imbalanced datasets<br>
                 <br>
-               
+               <!--Sebastian Raschke notebooks including optuna examples, really good https://github.com/rasbt/machine-learning-notes/tree/main/hyperparameter-tuning-methods-->
                 You can use scikitlearn and optuna to do cross validation and hyperparameter tuning.  The best endorsement for Optuna is that it's very well respected and widely used by the cut throat data science competitors at Kaggle<br>
                 <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation">scikit-learn - cross validation</a><br>
                     <!-- <strong><a href="https://scikit-learn.org/stable/modules/grid_search.html#grid-search">scikit-learn - hyper-parameter tuning</a><br>
@@ -413,15 +415,21 @@
             <td class="style_white "><em>10</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>    
-                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is bad for unbalanced datasets, and what are other measures that do a better job of evaluating model performence <br>
-               
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always), and what are other measures that do a better job of evaluating model performence <br>
+               <!--explainable AI
+                   see note in evernote permutation importance, 
+                   permutation importance https://scikit-learn.org/stable/modules/permutation_importance.html
+                   PDP plots
+                   SHAP?  very theoretical, but quite useful for explainable AI.  https://christophm.github.io/interpretable-ml-book/shap.html, OK vid a little lacking in why https://www.youtube.com/watch?v=-taOhqkiuIo-->
                 <br><strong>References</strong><BR>
                 <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_1_accuracy_precision_recall_f1_confusion.ipynb">Precision/Recall, F1 Score, Confusion Matrix</a></strong> Goes with lecture to the left<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/creditcard_small.csv">Small subset of Kaggle's credit card fraud dataset</a></strong> Goes with above notebook <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb">Permutation importance (and RandomForestClassifier's built in feature importance)</a></strong>How to tell what the model thinks is imortant<br>
  
+                
             </td>
         </tr>
         <!-- <tr>
