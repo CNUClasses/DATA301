@@ -416,16 +416,24 @@
             <td class="style_white "><em>10</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>    
-                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always), and what are other measures that do a better job of evaluating model performence <br>
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always). Other measures that do a better job of evaluating model performence <br><br>
+                      
+                
+                    <strong>Explainable AI - maybe the most interesting part of this class<br>
+                    Caveots: The model has learned something from the data. Features are not correlated.</strong><br><br>
+                    <strong>Which features are important to a model?</strong><br> 
+                    Random Forest built in Feature Importence method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
+                    Permutation Importance.  Works for any model.  Scramble the data in one column and then measures how model performence drops, if you do this for all columns then you have a notion of a features importence from the models perspective. Use these importances to rank features.  Leads to interesting conclusions. 
+                    For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>
+                    <strong>What happens to model prediction as I permute a particular set of features? Lets you ask questions of a model (see'PDP and ICE plots' notebook to the right ). 2 algorithms to consider</strong><br>
+                    
+                    ICE plots : measures the effect on target prediction when permuting column(s) on 1 row.<br>
+                    PDP : average of ICE plots<br>
+                    <br>
+
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_PDP_ICE_Explain.pdf">PDP and ICE plots</a></strong>
                     Measure what happens to model predictions when 1 or 2 features are permuted. For instance, if model is trained on housing data, PDP plots can tell you what effect lattitude and longitude have on housing prices<br>
-                   
-                    <!--
-                    The rest of this weeks content covers explainability in machine learning<br>
- 
-                    Try to avoid Random Forest built in Feature Importence method.  It's prone to overvalue high cardinality columns and works only for random forest, but it is fast.
-                    Prefer permutation Importance for any model, it scramble the data in one column and then measures how model performence drops, do this for all columns and you have a notion of relative importence<br>
-                    PDP plots: measure what happens when you permute the value of 1 column-->
+                 
                     <!--explainable AI
                     excellent visual for PDP plot http://ethen8181.github.io/machine-learning/model_selection/partial_dependence/partial_dependence.html
                    see note in evernote permutation importance, 
