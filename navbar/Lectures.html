@@ -52,8 +52,9 @@
         <tr>
             <td class="style_white "><em>1</em></td>
             <td class="style_white ">
-                <!--excellent notebooks, see sebastian raschke github https://github.com/rasbt/stat451-machine-learning-fs21.git -->
-                
+                <!--excellent notebooks, see sebastian raschke github https://github.com/rasbt/stat451-machine-learning-fs21.git 
+                   need a better treatment of error metrics for regression (R^2, mean absolute error (MAE) etc)-->
+
                 <!--<ul><strong>Tools to help you keep track of research</strong>
                     <li>A note taking App (like evernote)</li>
                     <li>A web highlighter, to highlight and web pages (like Weava)</li>
@@ -416,18 +417,37 @@
             <td class="style_white ">
                 <strong>Lectures</strong><BR>    
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always), and what are other measures that do a better job of evaluating model performence <br>
-               <!--explainable AI
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_PDP_ICE_Explain.pdf">PDP and ICE plots</a></strong>
+                    Measure what happens to model predictions when 1 or 2 features are permuted. For instance, if model is trained on housing data, PDP plots can tell you what effect lattitude and longitude have on housing prices<br>
+                   
+                    <!--
+                    The rest of this weeks content covers explainability in machine learning<br>
+ 
+                    Try to avoid Random Forest built in Feature Importence method.  It's prone to overvalue high cardinality columns and works only for random forest, but it is fast.
+                    Prefer permutation Importance for any model, it scramble the data in one column and then measures how model performence drops, do this for all columns and you have a notion of relative importence<br>
+                    PDP plots: measure what happens when you permute the value of 1 column-->
+                    <!--explainable AI
+                    excellent visual for PDP plot http://ethen8181.github.io/machine-learning/model_selection/partial_dependence/partial_dependence.html
                    see note in evernote permutation importance, 
                    permutation importance https://scikit-learn.org/stable/modules/permutation_importance.html
                    PDP plots
+                   SHAP verse Treeinterpreter https://arxiv.org/pdf/2010.06734.pdf found that SHAP took 60x as long, found 'found that using TI provides high quality results at a lower
+computational footprint.'
                    SHAP?  very theoretical, but quite useful for explainable AI.  https://christophm.github.io/interpretable-ml-book/shap.html, OK vid a little lacking in why https://www.youtube.com/watch?v=-taOhqkiuIo-->
                 <br><strong>References</strong><BR>
-                <br><strong>Homework</strong><BR>                 
+                    <strong><a href="https://www.kaggle.com/code/dansbecker/partial-plots">Partial Dependence Plots</a>
+
+                <br><strong>Homework</strong><BR>     
+                    <strong><a href="https://www.kaggle.com/code/dansbecker/shap-values">SHAP values</a>  SHAP Values (an acronym from SHapley Additive exPlanations) break down a prediction to show the impact of each feature for one row of data. Indicates why a model made a decision given a particular set of inputs.<br>         
             </td>
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_1_accuracy_precision_recall_f1_confusion.ipynb">Precision/Recall, F1 Score, Confusion Matrix</a></strong> Goes with lecture to the left<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/creditcard_small.csv">Small subset of Kaggle's credit card fraud dataset</a></strong> Goes with above notebook <br>
+                
+                <!--Partial Dependence and Individual Conditional Expectation Plots https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py
+                    https://scikit-learn.org/stable/modules/partial_dependence.html -->
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb">Permutation importance (and RandomForestClassifier's built in feature importance)</a></strong>How to tell what the model thinks is imortant<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_3_PDP_plots_ICE.ipynb">PDP and ICE plots</a></strong><br>
  
                 
             </td>
