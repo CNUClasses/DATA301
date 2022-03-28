@@ -53,7 +53,8 @@
             <td class="style_white "><em>1</em></td>
             <td class="style_white ">
                 <!--excellent notebooks, see sebastian raschke github https://github.com/rasbt/stat451-machine-learning-fs21.git 
-                   need a better treatment of error metrics for regression (R^2, mean absolute error (MAE) etc)-->
+                   need a better treatment of error metrics for regression (R^2, mean absolute error (MAE) etc)
+                where to get datasets https://www.openml.org/home-->
 
                 <!--<ul><strong>Tools to help you keep track of research</strong>
                     <li>A note taking App (like evernote)</li>
@@ -417,31 +418,38 @@
             <td class="style_white ">
                 <strong>Lectures</strong><BR>    
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always). Other measures that do a better job of evaluating model performence <br><br>
-                      
-                
-                    <strong>Explainable AI - maybe the most interesting part of this class<br>
-                    Caveots: The model has learned something from the data. Features are not correlated.</strong><br><br>
-                    <strong>Which features are important to a model?</strong><br> 
-                    Random Forest built in Feature Importence method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_PDP_ICE_Explain.pdf">PDP and ICE plots</a></strong>
+                    Measure what happens to model predictions when 1 or 2 features are permuted. For instance, if model is trained on housing data, PDP plots can tell you what effect lattitude and longitude have on housing prices<br>
+                   
+                <br>
+                    <strong><mark>Explainable AI - maybe the most interesting part of this class</mark><br>
+                    Caveots: </strong><br>
+                    1.The model has learned something from the data. <br>
+                    2.Features are not correlated.</strong><br><br>
+                    <strong>Algorithms that rank feature importance</strong><br> 
+                    
+                    <table border="1" cellspacing="0" cellpadding="3">
+                        <tr><td> </td><td>Works on</td><td>Speed</td><td>Comments</td></tr>
+                        <tr><td>Feature Importance</td><td>Random Forest</td><td>Fast</td><td>Overvalues high cardinality columns. Prefer Permutation importance.</td></tr>
+                        <tr><td>Permutation Importance</td><td>All</td><td>Slow</td><td>Scrambles data in each column, measure performence drop, Rank features by drop.</td></tr>
+                    </table><br>
+                    <!-- -Random Forest built in Feature Importance method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
                     Permutation Importance.  Works for any model.  Scramble the data in one column and then measures how model performence drops, if you do this for all columns then you have a notion of a features importence from the models perspective. Use these importances to rank features.  Leads to interesting conclusions. 
-                    For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>
-                    <strong>What happens to model prediction as I permute a particular set of features? Lets you ask questions of a model (see'PDP and ICE plots' notebook to the right ). 2 algorithms to consider</strong><br>
+                    For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>-->
+                    <strong>What happens to model prediction as I permute particular feature(s)?<br>
+                    </strong> Lets you ask questions of a model (see'PDP and ICE plots' notebook to the right ). 2 algorithms to consider<br>
                     
                     ICE plots : measures the effect on target prediction when permuting column(s) on 1 row.<br>
                     PDP : average of ICE plots<br>
-                    <br>
+                    
 
-                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_PDP_ICE_Explain.pdf">PDP and ICE plots</a></strong>
-                    Measure what happens to model predictions when 1 or 2 features are permuted. For instance, if model is trained on housing data, PDP plots can tell you what effect lattitude and longitude have on housing prices<br>
-                 
+                    
                     <!--explainable AI
                     excellent visual for PDP plot http://ethen8181.github.io/machine-learning/model_selection/partial_dependence/partial_dependence.html
                    see note in evernote permutation importance, 
                    permutation importance https://scikit-learn.org/stable/modules/permutation_importance.html
                    PDP plots
-                   SHAP verse Treeinterpreter https://arxiv.org/pdf/2010.06734.pdf found that SHAP took 60x as long, found 'found that using TI provides high quality results at a lower
-computational footprint.'
-                   SHAP?  very theoretical, but quite useful for explainable AI.  https://christophm.github.io/interpretable-ml-book/shap.html, OK vid a little lacking in why https://www.youtube.com/watch?v=-taOhqkiuIo-->
+                    SHAP?  very theoretical, but quite useful for explainable AI.  https://christophm.github.io/interpretable-ml-book/shap.html, OK vid a little lacking in why https://www.youtube.com/watch?v=-taOhqkiuIo-->
                 <br><strong>References</strong><BR>
                     <strong><a href="https://scikit-learn.org/stable/modules/partial_dependence.html"> Partial Dependence and Individual Conditional Expectation plots</a></strong><br>
                     <strong><a href="https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py">Partial Dependence and Individual Conditional Expectation Plots-Code</a></strong><br>
@@ -465,9 +473,33 @@ computational footprint.'
                 
             </td>
         </tr>
+        
+        <tr>
+            <td class="style_white "><em>11</em></td>
+            <td class="style_white ">
+                <strong>Lectures</strong><BR>  
+                    <!-- TreeInterpreter https://coderzcolumn.com/tutorials/machine-learning/treeinterpreter-interpreting-tree-based-models-prediction-of-individual-sample
+                    SHAP verse Treeinterpreter https://arxiv.org/pdf/2010.06734.pdf found that SHAP took 60x as long, found 'found that using TI provides high quality results at a lower
+  computational footprint.' 
+feature reduction-->
+  
+                    
+                <br><strong>References</strong><BR>
+                <br><strong>Homework</strong><BR>                 
+            </td>
+            <td class="style_white ">
+            </td>
+        </tr>
+
+        <!-- novelty and outlier detection https://scikit-learn.org/stable/modules/outlier_detection.html -->
+        <!-- https://www.analyticsvidhya.com/blog/2021/10/a-comprehensive-guide-to-time-series-analysis/ 
+        https://www.analyticsvidhya.com/blog/2021/06/random-forest-for-time-series-forecasting/-->
+
+
         <!-- <tr>
             <td class="style_white "><em>5</em></td>
             <td class="style_white ">
+ 
                 <strong>Lectures</strong><BR>                    
                 <br><strong>References</strong><BR>
                 <br><strong>Homework</strong><BR>                 
