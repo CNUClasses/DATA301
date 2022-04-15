@@ -422,7 +422,6 @@
 
                 <strong>Lectures</strong><BR>    
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always). Other measures that do a better job of evaluating model performence <br>
-                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week11/11_BoostedTrees.pdf">Gradient boosted trees</a></strong>A better tree ensemble than Random Forest, BUT they take longer to train and have more hyperparameters to tune.  So Optuna is a must for best performence<br><br> 
                 <br>
                     <strong><mark>Explainable AI - maybe the most interesting part of this class</mark><br>
                     Caveats: </strong><br>
@@ -514,7 +513,9 @@
                 <strong>Lectures</strong><BR>  
                 <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week11/11_BoostedTrees.pdf">Gradient boosted trees</a></strong>A better tree ensemble than Random Forest, BUT they take longer to train and have more hyperparameters to tune.  So Optuna is a must for best performence<br><br> 
 
-         <!--https://otexts.com/fpp2/  book on time series forcasting, looks good
+         <!--maybe good? https://towardsdatascience.com/time-series-from-scratch-decomposing-time-series-data-7b7ad0c30fe7
+             https://otexts.com/fpp2/  book on time series forcasting, looks good
+            https://online.stat.psu.edu/stat510/lesson/6/6.1 stats 501 the periodogram
              
             forcasting package https://www.sktime.org/en/v0.4.2/examples/01_forecasting.html 
              novelty and outlier detection https://scikit-learn.org/stable/modules/outlier_detection.html 
@@ -537,25 +538,39 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_12/12_2_TimeSeries1_lags_linearregression.ipynb">TS1: lags and linear regression</a></strong>Using linear regression models of increasing complexity to model time series data.  No forcasts yet, this just illustrates the utility of lags when used with linear regression<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/datasets/kaggle/tunnel.csv">Tunnel dataset</a></strong> Goes with above notebook.  Tracks number of cars going through the Baregg tunnel in Switzerland<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_12/12_3_trend_catboost.ipynb">TS2: detrending a dataset followed by catboost</a></strong>
-                Determine the shape of the dataset trend, select model appropiate to that shape. Detrend the dataset. Add some lags, then train a catboost regressor. How to do a train/test split for time series data. See stacked models (detrending, then gradient boost) performs on test set.  
+                Determine the shape of the dataset trend, select model appropiate to that shape. Detrend the dataset. Add some lags, then train a catboost regressor. How to do a train/test split for time series data. See how this hybrid model (detrending, then gradient boost) performs on test set.  
                 <br>
                
                 
                 
             </td>
         </tr>
-
-      <!-- <tr>
-            <td class="style_white "><em>5</em></td>
+       
+   <tr>
+            <td class="style_white "><em>13</em></td>
             <td class="style_white ">
  
                 <strong>Lectures</strong><BR>                    
                 <br><strong>References</strong><BR>
+                 <strong><a href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></strong>
                 <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
             </td>
-        </tr> -->
+        </tr> 
+
+        <!-- <tr>
+            <td class="style_white "><em>13</em></td>
+            <td class="style_white ">
+ 
+                <strong>Lectures</strong><BR>                    
+                <br><strong>References</strong><BR>
+                 <strong><a href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></strong>
+                <br><strong>Homework</strong><BR>                 
+            </td>
+            <td class="style_white ">
+            </td>
+        </tr>  -->
    
         
 
