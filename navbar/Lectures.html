@@ -178,7 +178,7 @@
             <td class="style_white "><em>4</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>
-                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week4/41_create_an_importable_package.pdf" style="color: #00cc00">Turn utils.py into a package</a></strong> utils.py is a module which can be accessed directly from python files in the same folder. In order to get to it from other folders it must be converted to a package, here is a simple way to do that.<br>
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week4/41_create_an_importable_package.pdf" style="color: #00cc00">Turn utils.py into a package</a></strong> utils.py is a module which can be accessed directly from python files in the same folder. In order to get to it from other folders it must be converted to a package, here is a simple way to do that. BONUS: these functions are now in 1 place only, easily imported into any other notebook or script.<br>
                     
                  <br><strong>References</strong><BR>
                  
@@ -195,27 +195,26 @@
                     https://towardsdatascience.com/autoencoders-vs-pca-when-to-use-which-73de063f5d7 Autoencoders verses PCA- OK article, essentially, use autoencoder when features have non linear relationship with each other, has OK examples
                     https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29-->
                 <br><strong>Homework</strong><BR>
-                    1. Move the functions from 'Set up Transforms' section of <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a> 
-                    notebook into a seperate package, import and use these functions in the notebook<br> 
-                    2. In the <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature Reduction</a> notebook, fill in t-SNE section, <mark>CAUTION: t-SNE is used just for visualization, not for dimensionality reduction since it does not preserve distance info.</mark><br>
-                    3. Time all 3 methods, PCA, t-SNE, and UMAP.  (Use %%time cell method) to get relative performance information specific to this problem.  BTW You should always consider algorithm efficiency (In computer science we use Big O notation as a proxy for this).  
+                    <!-- SEE COMMENTED OUT NOTEBOOK ABOVE< DO THIS IN CLASS 1. Move the functions from 'Set up Transforms' section of <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a> 
+                    notebook into a seperate package, import and use these functions in the notebook<br>  -->
+                    1. In the <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature Reduction</a> notebook, fill in t-SNE section, <mark>CAUTION: t-SNE is used just for visualization, not for dimensionality reduction since it does not preserve distance info.</mark><br>
+                    2. Time all 3 methods, PCA, t-SNE, and UMAP.  (Use %%time cell method) to get relative performance information specific to this problem.  BTW You should always consider algorithm efficiency (In computer science we use Big O notation as a proxy for this).  
                     But first and foremost you want the correct answer, PCA will get the same answer every time, while t-SNE will not given it's probablistic nature and potential to get stuck in local minima.  In other words, you likely get different answers on different runs for t-SNE (it may also find structure where none exists). OTOH, it generates pretty clusters.<br>
        
             </td>
             <td class="style_white ">
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Scaling Numerical Data</a></strong> After all categorical variables have been converted to numerical data, scale them with these transforms. (Note: this is required in order to use this data as input to many ML algorithms)<br><br>
-                <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Scaling Numerical Data</a></strong> After all categorical variables have been converted to numerical data, scale them with these transforms. (Note: this is required in order to use this data as input to many ML algorithms)<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature reduction</a></strong>Removing highly correlated features <strong>and</strong> using PCA for feature reduction--
-                See Albon, recipes 9.1 and 10.3 for PCA and Removing highly correlated features.  Do these 2 steps <strong>after</strong> categorical data has been converted to numerical data<br><br><br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
-
+                See Albon, recipes 9.1 and 10.3 for PCA and Removing highly correlated features.  Do these 2 steps <strong>after</strong> categorical data has been converted to numerical data<br><br>
 
                             
-                These 2 notebooks demonstrate; using the package created in the left pane and pipelines.  Both are useful when porting a notebook to a script. 
+                The following 3 notebooks demonstrate; using the package created in the left pane and pipelines.  Both are useful when porting a notebook to a script. 
                 <br>
-                <strong><a href="https://github.com/CNUClasses/utils.git" style="color: #00cc00">the utils package</a></strong> I put this in the course websites parent folder and add its location to the system path as annotated in this packages README.md file<br>
+                <strong><a href="https://github.com/CNUClasses/utils.git" style="color: #00cc00">the utils package</a></strong>A collection of reusable utilities that come in handy for many notebooks. See README.md for more information<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb" style="color: #00cc00"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms to a dataframe.  Pipelines streamline pre-processing <br>
+
+                <!-- <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline, pre function migration to package</a></strong> USE THIS TO DEMO MOVING FUNCTIONS TO PACKAGE <br> -->          
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms (from above utils package) to a dataframe.  Pipelines streamline pre-processing <br>
                 <!-- a script which does all the data preprocessing steps shown in the jupyter notebook -->
                 <br><br>Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
                 They are not meant for production environments since they tend to display lots of UI and require intervention to run each cell.  
@@ -233,7 +232,10 @@
                 <li>Place all code that should run in this guarded section.</li>
                 </ol>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline' <br>
-              </td>
+ 
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
+
+            </td>
         </tr>
 
        
