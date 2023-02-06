@@ -216,6 +216,51 @@
                 <!-- <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline, pre function migration to package</a></strong> USE THIS TO DEMO MOVING FUNCTIONS TO PACKAGE <br> -->          
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms (from above utils package) to a dataframe.  Pipelines streamline pre-processing <br>
                 <!-- a script which does all the data preprocessing steps shown in the jupyter notebook -->
+            </td>
+        </tr>
+        <tr>
+            <td class="style_white "><em>5</em></td>
+            <!-- sample your dataset if it's huge to make it faster to iterate over development-->
+               
+            <td class="style_white ">
+                <strong>Lectures</strong><BR>
+                       <!--UMAP for clustering?-->
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
+                     with an emphasis on introducing unsupervised, clustering techniques<br>
+                     <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is. Includes all clustering algorithms</mak></B><br>
+                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/kmeans_in_class_notes_for_board.pdf">BOARDWORK NOTES:kmeans clustering, elbow method, silhouette score</a></strong><br>
+                     <ul><strong>Kmeans considerations</strong>
+                        <li>Is fast, O(n)</li>
+                        <li>Minimizes the sum of distances from each point and its nearest cluster.</li>
+                        <li>Is vulnerable to outliers.  It classifies every point, so outliers can have large effect on cluster center)</li>  
+                        <li>Works best with spherical clusters</li> 
+                        <li>Must know how many clusters before you run algorithm (use elbow method or silhouette score to estimate)</li>
+                        <li>Is not guranteed to produce the same result every run (it depends on initial cluster centers)</li>
+                     </ul>              
+                <br><strong>References</strong><BR>
+                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms</a>A MUST READ: </strong>compares 7 clustering algorithms on a messy dataset. Assesses each according to performence metrics given <a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html#some-rules-for-eda-clustering">here </a>. 
+                        Emphasizes 'being right' since, for dimensions >3, you cannot visually confirm results by plotting.</a><br>
+                        <strong><a href="https://hdbscan.readthedocs.io/en/latest/performance_and_scalability.html">Benchmarking Performance and Scaling of Python Clustering Algorithms</a></strong>TLDR-Prefer HDBSCAN. HDBSCAN, DBSCAN and K-means are the only algorithms that converge in a reasonable amount of time on large datasets. K-means is fastest but it's performance is poor. <br> 
+                    
+                    <!-- FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
+                    <!-- kmeans and heiarchical intro-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=blog&utm_medium=beginners-guide-hierarchical-clustering -->
+                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
+                    <!-- tuning DBSCAN and HDBSCAN and OPTICS http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/ -->
+                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
+                    <!-- <strong><a href="https://www.youtube.com/watch?v=7xHsRkOdVwo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=37">StatQuest: Heiarchical Clustering</a>  If I cover it<br> -->
+                    <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
+                    <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"> scikit-learn KMeans</a></strong> 
+                    Sample code and methods, pay attention to fit, predict (for new data), inertia_ (quality measure, sum of squared distances of samples to closest cluster center). Consider using the KMeans++ method to initialize cluster centers to the K points furthest from one another<br>
+                    <strong><a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html"> Selecting the number of clusters with silhouette analysis</a></strong> 
+                    
+                    
+    <!--Maybe a little esoteric? Goes with notebook below 'Curse of Dimen...' <br><br><strong>Homework</strong><BR>
+                 See if you can use numpy to vectorize the function get_distances(dims): in 51_curse_of_dimensionality.ipynb <br> -->
+
+            </td>
+            <td class="style_white ">
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
+
                 <br><br>Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
                 They are not meant for production environments since they tend to display lots of UI and require intervention to run each cell.  
                 If your notebook is purely exploratory, that is it only plots various aspects of data, then you need do nothing else. 
@@ -233,10 +278,12 @@
                 </ol>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline' <br>
  
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
 
+<!-- Maybe a little esoteric?                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/51_curse_of_dimensionality.ipynb">The curse of dimensionality</a></strong> Shows how data that is tightly clustered in low dimensions becomes sparse as dimensionality increases. 
+                  This phenomena makes it harder to train ML models, and is why dimensionality reduction is so important.<br> Also has some interesting interactive plots. -->
+                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
+             
             </td>
         </tr>
-
        
         </table>
