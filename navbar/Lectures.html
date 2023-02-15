@@ -239,9 +239,11 @@
                         <li>Will classify every point into the number of clusters you asked for, even if all points are are randomly generated! So your clusters may be meaningless!</li>
                      </ul>              
                 <br><strong>References</strong><BR>
-                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms</a>A MUST READ: </strong>compares 7 clustering algorithms on a messy dataset. Assesses each according to performence metrics given <a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html#some-rules-for-eda-clustering">here </a>. 
-                        Emphasizes 'being right' since, for dimensions >3, you cannot visually confirm results by plotting.</a><br>
-                      
+                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms</a>A MUST READ: </strong>
+                    compares 7 clustering algorithms on a messy dataset. Assesses each according to performence metrics 
+                    given in <a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html#some-rules-for-eda-clustering">Some rules for EDA clustering
+                    </a>. Emphasizes 'being right' since, for dimensions >3, you cannot visually confirm results by plotting.</a><br>
+                        
                     <!-- FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
                     <!-- kmeans and heiarchical intro-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=blog&utm_medium=beginners-guide-hierarchical-clustering -->
                     <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
@@ -289,23 +291,30 @@
             <td class="style_white "><em>6</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>  
-                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week6/DBScan_in_class_notes_for_board.pdf">BOARDWORK NOTES: DBSCAN algorithm overview</a></strong>
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week6/DBScan_HDBScan_in_class_notes_for_board.pdf">BOARDWORK NOTES: DBSCAN and HDBSCAN algorithms</a></strong>
                     <br>
                     <ul><strong>DBSCAN considerations</strong>
-                        <li>Is fast, O(n)</li>
-                        <li>Finds dense regions in data</li>
+                        <li>Is fast, O(nlog(n))</li>
+                        <li>Finds varibly dense regions in data (minimum density set by eps and min_samples)</li>
                         <li>Finds arbitraily shaped clusters</li>
                         <li>Is not vulnerable to outliers</li>  
                         <li>Performs poorly when clusters overlap (performs best when dense areas are separated by sparse areas)</li> 
-                        <li>Must set eps and min_samples (See accompanying notebook estimating eps) but not the number of clusters</li>
+                        <li>Must set eps and min_samples (See accompanying notebook section 'Estimating ps') but not the number of clusters</li>
                         <li>Is not guaranteed to produce the same result every run (after classifying core-points, it depends on which cluster the algorithm randomly chooses first)</li>
                      </ul>
+                     <ul><strong>HDBSCAN considerations (same as DBscan with following differences)</strong>
+                        <li>Finds varibly dense regions in data (no eps paramaeter so no min density)</li>
+                        <li>Must set min_cluster_size and min_samples but not the number of clusters (no eps)</li>
+                      </ul>
                 <strong style="color: #cc0000">Test, 3/1/23.  Includes everything through 2/27/23. <BR>
                 The test will be hosted on gitlab<br>
                 </strong> <br> 
         
                           
                 <br><strong>References</strong><BR>
+                    
+                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/index.html">The hdbscan Clustering Library</a></strong>HDBScan is not part of scikit-learn, but it is easy to use. Install then import the package and use just like any other scikit-learn estimator<br> 
+                    
                     <strong><a href="https://hdbscan.readthedocs.io/en/latest/performance_and_scalability.html">Benchmarking Performance and Scaling of Python Clustering Algorithms</a></strong>TLDR-Prefer HDBSCAN. HDBSCAN, DBSCAN and K-means are the only algorithms that converge in a reasonable amount of time on large datasets. K-means is fastest but it's performance is poor. Article examines 11 algorithms. 
                     The plot labeled 'Performance Comparison of Clustering Implementations' illustrates how these algorithms perform against each other.<br> 
                     
@@ -314,9 +323,7 @@
                     Elbow method, Silhouette, and Intercluster distance maps - work with KMeans<br>
                     <strong><a href=" https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012">Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra</a></strong> 
                     Discusses how to calculate eps in DBSCAN<br> 
-                    <strong><a href="https://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html">Comparing Python Clustering Algorithms
-                    </a> </strong>What if you don’t know much about your data? What algorithm is good for exploratory data analysis (EDA)? Pay attention to 'Some rules for EDA clustering' section<br>
-                    <!--detailed copy verses view https://www.dataquest.io/blog/settingwithcopywarning/ -->
+                     <!--detailed copy verses view https://www.dataquest.io/blog/settingwithcopywarning/ -->
                     <strong><a href="https://www.practicaldatascience.org/html/views_and_copies_in_pandas.html">Views and Copies in pandas</a></strong>
                         Subsetting DataFrames in pandas will sometimes generate views, and sometimes copies.  It depends on the structure of the dataframe, and, if modifying, the kind of modification.  To be safe follow these rules; <b>"If you make a slice for any purpose other than immediately analyzing, you should add .copy() to that slice"</b><br>
                    
@@ -326,8 +333,9 @@
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/62_dbscan.ipynb">DBSCAN</a></strong> 
                 Example, also how to use sklearns NearestNeighbor and kneed to calculate eps.<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix</a></strong><br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/64_inclass_cluster_example.ipynb">In class Clustering example</a></strong>From data pre processing to plotting<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix</a></strong><br>
+
                 
             </td>
         </tr> 
