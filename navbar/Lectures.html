@@ -280,7 +280,9 @@
                 <li>Place all code that should run in this guarded section.</li>
                 </ol>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline' <br>
- 
+                <!-- see projects/proj2 folder <strong><a href="">Something Different: What can we figure out about people without doing much of anything to the data</a></strong>Uses a larger version of the marketing dataset you are working on for project 2<br> -->
+                
+                
 
 <!-- Maybe a little esoteric?                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/51_curse_of_dimensionality.ipynb">The curse of dimensionality</a></strong> Shows how data that is tightly clustered in low dimensions becomes sparse as dimensionality increases. 
                   This phenomena makes it harder to train ML models, and is why dimensionality reduction is so important.<br> Also has some interesting interactive plots. -->
@@ -307,9 +309,7 @@
                         <li>Finds varibly dense regions in data (no eps paramaeter so no min density)</li>
                         <li>Must set min_cluster_size and min_samples but not the number of clusters (no eps)</li>
                       </ul>
-                <strong style="color: #cc0000">Test, 3/1/23.  Includes everything through 2/27/23. <BR>
-                The test will be hosted on gitlab<br>
-                </strong> <br> 
+                
         
                           
                 <br><strong>References</strong><BR>
@@ -325,8 +325,6 @@
                     <strong><a href=" https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012">Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra</a></strong> 
                     Discusses how to calculate eps in DBSCAN<br> 
                      <!--detailed copy verses view https://www.dataquest.io/blog/settingwithcopywarning/ -->
-                    <strong><a href="https://www.practicaldatascience.org/html/views_and_copies_in_pandas.html">Views and Copies in pandas</a></strong>
-                        Subsetting DataFrames in pandas will sometimes generate views, and sometimes copies.  It depends on the structure of the dataframe, and, if modifying, the kind of modification.  To be safe follow these rules; <b>"If you make a slice for any purpose other than immediately analyzing, you should add .copy() to that slice"</b><br>
                    
                     <br><strong>Homework</strong><BR> 
                     See sections 2.2,3.0 and 3.1 in <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/64_inclass_cluster_example.ipynb">In class Clustering example</a>                
@@ -337,9 +335,48 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/64_inclass_cluster_example.ipynb">In class Clustering example</a></strong>From data pre processing to plotting<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/Mall_CustomersNew.csv">In class Clustering example-dataset</a></strong>Goes with above notebook<br>
  
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix</a></strong><br>
 
                 
+            </td>
+        </tr> 
+
+        <tr>
+            <td class="style_white "><em>7</em></td>
+            <td class="style_white ">
+                <strong style="color: #cc0000">Test, 3/1/23.  Includes everything through week 6 above and projects 1 and 2. Concentrate on;<BR>
+                    please know how to merge dataframes<br>
+                    please be familiar with groupby across multiple columns (see groupby and apply notebook from week 3)<br>
+                    please be familiar with all of project 2 including;<br>
+                    -cleaning data (nulls, duplicates, catagoricals, no variance, high variance, correlations)<br>
+                    -scaling data and applying pca<br>
+                    -how to run scaled data through hdbscan and kmeans clustering algorithms<br>
+                    
+                    The test will be hosted on gitlab<br>
+                    </strong> <br> 
+                <strong>Lectures</strong><BR> 
+                <strong><a href="https://www.practicaldatascience.org/html/views_and_copies_in_pandas.html">Views and Copies in pandas</a></strong>
+                Subsetting DataFrames in pandas will sometimes generate views, and sometimes copies.  It depends on the structure of the dataframe, and, if modifying, the kind of modification.  To be safe follow these rules; <b>"If you make a slice for any purpose other than immediately analyzing, you should add .copy() to that slice"</b><br>
+    
+                <br><B><mark>Supervised Learning - Use when you do know what the right answer is. </make> Algorithms include regressions, decision trees, random forest, all neural networks</B><br>
+                <strong>Lectures</strong><BR> 
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week7/71_supervised_split_dataset.pdf">Supervised - Train/Test splits</a></strong><br>
+                    <!-- Do the math for linear regression on board -->
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week7/72_training_OLS_linear_regression.pdf">Ordinary Least Squares - Linear Regression</a></strong><br>
+ 
+                
+
+                <br><strong>References</strong><BR>
+                    <!-- https://www.kaggle.com/code/rafjaa/dealing-with-very-small-datasets/notebook  uses smote to generate minority class rows -->
+                    <strong><a href="https://nbviewer.org/gist/KhyatiMahendru/734da147385bcf630a42ba7c11cfc6c4?source=post_page">Credit Card Fraud Notebook that uses SMOTE to upsample the minority class</a></strong>Note what happenned when they used accuracy as a metric with the original unSMOTED data<br>
+                    <strong><a href="https://www.analyticsvidhya.com/blog/2017/07/covariate-shift-the-hidden-problem-of-real-world-data-science/">Covariate Shift – Unearthing hidden problems in Real World Data Science</a>
+                    <br><strong>Homework</strong><BR>                 
+            </td>
+            <td class="style_white ">
+                <!--71_  uses np.vectorize-->
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix</a></strong><br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb">Splitting a dataset</a></strong> <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb">OLS Linear Regression</a></strong><br>
+             
             </td>
         </tr> 
        
