@@ -1,0 +1,5 @@
+Do a groupby complex
+plot x,y,z from this
+
+is silhoutte analysis valid for density clusters?
+Not as valid as it is for kmeans, silhoute analysis is density based, so can be skewed
