@@ -403,8 +403,50 @@
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_8/81_DecisionTrees.ipynb">Decision Trees</a></strong> <br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_8/81_DecisionTrees_INCLASS.ipynb">Decision Trees INCLASS using iris dataset</a></strong> <br>
-                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_8/82_RandomForest_OOB_intro_.ipynb">Random Forest and OOB scores</a></strong> <br>
-            </td>
+             </td>
         </tr>
+        <tr>
+            <td class="style_white "><em>9</em></td>
+            <td class="style_white ">
+                <strong>Lectures</strong><BR> 
+                <strong>Random Forest Introduction</strong><!--see notes--><br>
+                <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week9/91_crossval_hyperparam_tune_trees.pdf">Cross Validation and hyperparameter tuning</a></strong>How to tune hyperparameters on a model to give optimal performence for a particular dataset<br>
+                <strong style="color: #cc0000">Something interesting (and horrible TBH).  I talked about using a trained models knowledge to select candidate drugs for clinical trials.  Here is a similar application that goes in the other direction <a href="https://www.theverge.com/2022/3/17/22983197/ai-new-possible-chemical-weapons-generative-models-vx">AI suggested 40,000 new possible chemical weapons in just six hours</a> It's sobering that this is so easy to do.<br></strong>
+                  
+
+                <br><strong>References</strong><BR>
+                <strong><a href="https://youtu.be/fDQkUN9yw44"> Bias, Variance</a></strong>How to see if your model overfits or underfits or is just right<br>
+                <!--get the bias variance targets, then graph then cross validation to tune hyperparameters (for RF), then train on full dataset (minus holdout) then the error-->
+                <!-- just the first graph showing training error and validation error  <strong><a href="https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9">The Bias-Variance Tradeoff</a><br> -->
+                <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.
+                A Random forest will not overfit by adding more trees, it will overfit based on other hyperparameters though. How to choose correct values for hyperparameters?  <br>
+                <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn cross validation</a></strong>A detailed explanation.  Pay attention to stratified cross validation, a way to use cross validation on imbalanced datasets<br>
+                <br>
+               <!--Sebastian Raschke notebooks including optuna examples, really good https://github.com/rasbt/machine-learning-notes/tree/main/hyperparameter-tuning-methods-->
+                You can use scikitlearn and optuna to do cross validation and hyperparameter tuning.  The best endorsement for Optuna is that it's very well respected and widely used by the cut throat data science competitors at Kaggle<br>
+                <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation">scikit-learn - cross validation</a><br>
+                    <!-- <strong><a href="https://scikit-learn.org/stable/modules/grid_search.html#grid-search">scikit-learn - hyper-parameter tuning</a><br>
+                    -->
+ 
+                <strong><a href="https://colab.research.google.com/github/optuna/optuna-examples/blob/main/quickstart.ipynb#scrollTo=-cWafqOdRghs">Optuna Example-hosted on Google Colab:  Selecting best hyperparameters for a Random Forest Classifier</a><br>
+                <!--Run the following notebook in class!  Its an excellent introduction-->
+                <strong><a href="https://www.kaggle.com/bextuychiev/no-bs-guide-to-hyperparameter-tuning-with-optuna">No BS Guide to Hyperparameter Tuning With Optuna</a><br>
+                <strong><a href=" https://optuna.org/">How to pass multiple arguments to Optunas objective function</a><br>     
+                <strong><a href=" https://optuna.org/">Optuna - home page </a><br>
+
+                <!--cross validation-->
+                   
+                <br><strong>Homework</strong><BR> 
+
+            </td>
+            <td class="style_white ">
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_8/82_RandomForest_OOB_intro_.ipynb">Random Forest and OOB scores</a></strong> <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_9/91_randomforest_INCLASS.ipynb">Estimate housing prices</a></strong> Using both random forest and decision trees. Evaluated using mean absolute error <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_9/91_randomforest_INCLASS_SOLUTION.ipynb">Estimate housing prices SOLUTION</a></strong> <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_9/92_randomforest_verses_regression.ipynb">Random forest verses regression</a></strong> When to use one over the other (almost always use RF).  RF failure - the extrapoltaion problem<br>            
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_9/93_randomforest_tuning_hyperparameters_and_cross_validation.ipynb">Cross validation and hyperparameter tuning</a></strong> Using Optuna and scikitlearn to find optimal model hyperparmeters <br>            
+
+            </td>
+        </tr> 
       
         </table>
