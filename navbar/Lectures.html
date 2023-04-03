@@ -491,8 +491,8 @@
                     
 <br>
                     <strong>Algorithms that quantify each feature contribution for a particular prediction.</strong><br>
-                    treeinterpreter: why a particular prediction was made, what features influenced it.  Why 2 different groups of predictions differ.  May not be activly maintained.<br>
-                    SHAP: why a particular prediction was made, what features influnced it.  Activly maintained. <br>
+                    treeinterpreter: why a particular prediction was made, what features influenced it.  Why 2 different groups of predictions differ.  May not be actively maintained.<br>
+                    SHAP: why a particular prediction was made, what features influenced it.  Actively maintained. <br>
                     <br>
                     <strong>How to get the probability instead of class membership from a Random Forest classifier</strong><br>
                     model.pred_proba(): for random forest this is the number of trees that predicted a class divided by total number of trees<br>
@@ -547,6 +547,53 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_11/11_4_SHAP_regressor_classifier.ipynb">SHAP</a></strong>Using SHAP to determine which features influenced a prediction.<br>
               
  
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="style_white "><em>12</em></td>
+            <td class="style_white ">
+                <strong style="color: #cc0000">Test, 4/14/23.  Includes week 7 through week 11. Will be hosted on gitlab<br></strong>
+
+                <strong>Lectures</strong><BR>  
+                <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week11/11_BoostedTrees.pdf">Gradient boosted trees</a></strong>A better tree ensemble than Random Forest, BUT they take longer to train and have more hyperparameters to tune.  So Optuna is a must for best performence<br><br> 
+
+         <!--maybe good? https://towardsdatascience.com/time-series-from-scratch-decomposing-time-series-data-7b7ad0c30fe7
+            https://www.kaggle.com/code/andreshg/timeseries-analysis-a-complete-guide/notebook
+             https://otexts.com/fpp2/  book on time series forcasting, looks good
+            https://online.stat.psu.edu/stat510/lesson/6/6.1 stats 501 the periodogram
+             
+            https://www.kaggle.com/code/ryanholbrook/forecasting-with-machine-learning  have not really done
+            https://www.kaggle.com/code/kperkins411/time-series-bonus-lesson-unofficial/edit  very good!
+
+            forcasting package https://www.sktime.org/en/v0.4.2/examples/01_forecasting.html 
+             novelty and outlier detection https://scikit-learn.org/stable/modules/outlier_detection.html 
+         https://www.analyticsvidhya.com/blog/2021/10/a-comprehensive-guide-to-time-series-analysis/ 
+        https://www.analyticsvidhya.com/blog/2021/06/random-forest-for-time-series-forecasting/
+    
+    calculated autocorrelations with lagged data in pandas series https://stackoverflow.com/questions/33171413/cross-correlation-time-lag-correlation-with-pandas
+
+    trend- moving average should span seasonality period https://www.accaglobal.com/middle-east/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/time-series.html -->
+
+
+
+
+                <br><strong>References</strong><BR>
+                <strong><a href="https://www.youtube.com/watch?v=2AQKmw14mHM">Statquest: R-squared, Clearly Explained!!!</a></strong> This is the default measure used for sklearn random forest regressor, lightGBM boosted tree regressor, and catboost boosted tree regressor<br>
+                <strong><a href="https://www.kaggle.com/learn/time-series">Kaggle: Time Series short course</a></strong> A good introduction to forcasting with time series data<br>
+                <!-- <a href="https://www.kaggle.com/code/bextuychiev/every-pandas-function-to-manipulate-time-series/notebook">Every Pandas Function to Manipulate Time Series</a> -->
+                <br><strong>Homework</strong><BR>                 
+            </td>
+            <td class="style_white ">
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_12/12_1_boostedtrees.ipynb">Boosted Trees</a></strong>Compares Random Forest, LightGBM and Catboost for both regression and classification tasks.  Catboost is the winner in terms of speed and overall accuracy (at least for these datasets and these tasks), see documentation in first cell for further comparisons.<br>
+                <br><strong>Time series (TS)</strong><br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_12/12_2_TimeSeries1_lags_linearregression.ipynb">TS1: lags and linear regression</a></strong>Using linear regression models of increasing complexity to model time series data.  No forcasts yet, this just illustrates the utility of lags when used with linear regression<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/datasets/kaggle/tunnel.csv">Tunnel dataset</a></strong> Goes with above notebook.  Tracks number of cars going through the Baregg tunnel in Switzerland<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_12/12_3_trend_catboost.ipynb">TS2: detrending a dataset followed by catboost</a></strong>
+                Determine the shape of the dataset trend, select model appropiate to that shape. Detrend the dataset. Add some lags, then train a catboost regressor. How to do a train/test split for time series data. See how this hybrid model (detrending, then gradient boost) performs on test set.  
+                <br>
+               
+                
                 
             </td>
         </tr>
