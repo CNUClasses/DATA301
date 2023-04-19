@@ -624,13 +624,16 @@
             <td class="style_white ">
  
                 <strong>Lectures</strong><BR>  
-                    <strong><a href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></strong><br>
+                    
  
                     <!-- <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week14/course_wrapup_where_to_go_next.pdf">Data 301 course wrapup and what to do next</a></strong><br><br>  -->
-
-
                 <br><strong>References</strong><BR>
-                    <!-- <strong ><a href="https://github.com/CNUClasses/DATA301/blob/master/content/tests/test2_solution.pdf" style="color: #cc0000">Test 2 SOLUTION</a></strong> <br>  -->
+                    <!-- Autocorrelation is simply the correlation of a series with its own lags. If a series is significantly autocorrelated, that means, the previous values of the series (lags) may 
+                        be helpful in predicting the current value.
+                        Partial Autocorrelation also conveys similar information but it conveys the pure correlation of a series and its lag, excluding the correlation contributions from the intermediate lags. -->
+                        <strong><a href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></strong><br>
+ 
+                        <!-- <strong ><a href="https://github.com/CNUClasses/DATA301/blob/master/content/tests/test2_solution.pdf" style="color: #cc0000">Test 2 SOLUTION</a></strong> <br>  -->
                     <!-- <strong ><a href="https://towardsdatascience.com/5-ways-to-detect-outliers-that-every-data-scientist-should-know-python-code-70a54335a623">5 Ways to Detect Outliers/Anomalies That Every Data Scientist Should Know (Python Code)</a><br>
                     <strong ><a href="https://www.analyticsvidhya.com/blog/2021/07/anomaly-detection-using-isolation-forest-a-complete-guide/#:~:text=In%20an%20Isolation%20Forest%2C%20randomly,more%20cuts%20to%20isolate%20them.https://www.analyticsvidhya.com/blog/2021/07/anomaly-detection-using-isolation-forest-a-complete-guide/#:~:text=In%20an%20Isolation%20Forest%2C%20randomly,more%20cuts%20to%20isolate%20them.">Anomaly detection using Isolation Forest – A Complete Guide</a><br>
                     <strong ><a href="https://www.linkedin.com/pulse/how-use-machine-learning-anomaly-detection-condition-flovik-phd/">How to use machine learning for anomaly detection and condition monitoring</a> Light on code but does a good job of outlining how anomalous behaviour can be used as an early warning to machinery failure</strong><br><br> -->
@@ -643,10 +646,22 @@
                     <strong style="color: #cc0000">Final Exam: Monday May 1st, 8-10:30am</strong><br>
                         <!-- Final exam posted under projects tab, due 5/4/22 midnight.<br></strong> -->
                     <!-- If you would like to do a final project in lieu of a final exam let me know your plans by Saturday 4/23/22, so we can agree on deliverables<br></strong> -->
-                <br><strong>Homework</strong><BR>                 
+                <br><strong>Homework</strong><BR>   
+                    <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition.
+                        <ol>
+                            <li>Add a time field for linear regressor portion of time series model</li>
+                            <li>Infer some of the missing YearMade dates using groupby</li>
+                            <li> Use Fastai to help preprocess data (cont_cat_split,Categorify, FillMissing, TabularDataframe etc..) </li>
+                            <li>Create BoostedHybrid model from utils</li>
+                            <li>Train and evaluate model</li>
+                            <li>Use Optuna to finetune catboost regressor</li>
+                            <li>Try adding different data to see if it helps (VIX data)</li>                           
+                        </ol>              
             </td>
             <td class="style_white ">
+
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_13/13_1_Hybrid_Model.ipynb">TS3: A hybrid model consisting of a linear regressor and gradient Boosted Tree</a></strong>Wrapping models in an object, feature engineering (holidays, holiday travel, weekday or weekend) autocorrelation and partial autocorrelation plots<br>
+                <strong ><a style="color: #008800" href="https://github.com/CNUClasses/DATA301_CODE/blob/master/homework/bigiron.ipynb">bluebook-for-bulldozers Kaggle Competitions notebook</a></strong>Solution <br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_14/14_1_Elec-INCLASS.ipynb">TS3: Estimating electricity usuage using the hybrid model IN CLASS EXERCISE</a></strong><br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_14/14_1_Elec.ipynb">TS3: Estimating electricity usuage using the hybrid model SOLUTION</a></strong><br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_14/elecdemand.csv">Electricity usage dataset, goes with above notebooks</a></strong><br>
