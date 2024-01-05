@@ -60,13 +60,15 @@
                 This is a huge debugging speedup since you only load data once, you do not have to reload it every time you change your code.<br>
                 On the other hand, the debugger is primitive when compared to a full fledged IDE like PyCharm.<br>
                 Also jupyter notebooks are used to prototype your solution.  Once everything works, you'll probably export the salient bits to packages and scripts to be used by other components, like a webservice or dashboard.<br>
-                <!-- STOPPED WORKING 1/8/23-What's a dashboard? Its a way to aggregate and interactively display data in a user friendly way.  Here is an example <a href="https://kp-avocado.herokuapp.com">dashboard</a> (takes a bit to provision and load) created from <a href="https://realpython.com/python-dash/">this</a> excellent tutorial. -->
                   <br><br>
               
                 <strong>References</strong><BR>
                 <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week1/Pandas_Cheat_Sheet.pdf"> Pandas cheatsheet</a></strong><br>                   
                 <strong><a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf"> Anaconda cheatsheet</a></strong><br>
+                <strong><a href="https://www.youtube.com/watch?v=rSPyvPw0p9k">Using a debugger in a notebook (VERY USEFUL) </a></strong>Did a jupyter cell crash? Check the state using the debugger by typing  %debug in the next cell, then;  u (up a line),d (down a line), p varname (print varname) and q (quit the debug session). <br>                   
+               
                 <strong><a href="https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/">Virtual Environments</a></strong><br>
+               
                 <br>
                 Anaconda and Windows - getting Jupyter Lab up and running in your virtual environment of choice (one of several ways)<BR>
                     <ol>
@@ -102,7 +104,7 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_1/1_JupyterUsage.ipynb">How to efficiently navigate a Jupyter Notebook</a></strong> Some keyboard shortcuts, "Magic" commands, how to run shell commands, getting API help, and an introduction to debugging in a Jupyter Notebook<br>
             </td>
         </tr>
-     <tr>
+<!--     <tr>
 
         <td class="style_white "><em>2</em></td>
         <td class="style_white ">
@@ -125,7 +127,7 @@
                  Image stuff
                  your standing at Vernal falls in Yosemete and you want to take a picture with no one in it.  It's crowded - how do you do it?
                 -->
-                <br>
+<!--                <br>
             <strong>References</strong><BR>
                 
             <a href="https://www.kaggle.com/alexisbcook/inconsistent-data-entry"> Kaggle- text pre processing</a>Very good, especially the fuzzywuzzy module<br>              
@@ -138,7 +140,7 @@
            <!-- <a href=" https://realpython.com/regex-python/ "> Regular Expressions- part 1</a><br> -->
              <!-- <a href=" https://realpython.com/regex-python-part-2/ "> Regular Expressions- part 2</a><br> -->
                              
-        </td>
+<!--        </td>
         <td class="style_white ">
             <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_2/22_review_chapter_5.ipynb">Pandas Intro</a></strong> Chapter 5, McKinney<br>
             <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_2/23_review_chapter_6.ipynb">Data Loading and Saving</a></strong> Chapter 6, McKinney<br>  
@@ -158,10 +160,10 @@
                  <strong>References</strong><BR>
                     Chapter 7 in McKinney <br>
                     Chapter 10, up to section 10.3, 'Suppressing the Group Keys'<br><br>
-                    
+                    <!--excellent clustering and LLM example https://github.com/CNUClasses/Clustering-with-LLM.git, see article https://towardsdatascience.com/mastering-customer-segmentation-with-llm-3d9008235f41-->
                     <!-- https://www.statology.org/cluster-analysis-real-life-examples/ -->
                 <!-- <a href="https://towardsdatascience.com/how-to-structure-your-data-science-workflow-b06748b7761a>EXCELLENT- Full exploration and solution using titanic dataset,exploration is great, see the catplot for male/female survival</a> -->
-                <strong>Homework</strong><BR>
+<!--                <strong>Homework</strong><BR>
                     See if you can replace map with apply in the <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_2/24_cleaning_strings.ipynb">Cleaning Strings</a></strong> notebook<br> section 1.13,"Add a new column to track the changed columns"<br> 
            </td>
             <td class="style_white ">
@@ -184,20 +186,20 @@
                  
                     <strong><a href="https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355 ">Python Packages tutorial</a></strong>Does not include namespace packages<br>
                     <!--excellent tutorial  https://www.kaggle.com/alexisbcook/pipelines -->
-                    <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pipelines- a way to iteratively apply a list of functions to a dataframe</a></strong>An excellent way to simplify and streamline data pre processing.<br>
+<!--                    <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pipelines- a way to iteratively apply a list of functions to a dataframe</a></strong>An excellent way to simplify and streamline data pre processing.<br>
                     <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), Step-by-Step</a></strong>For those of you who want more information on PCA<br>
                     <!-- https://www.youtube.com/watch?v=oRvgq966yZg -- if fewer samples than variables then the number of samples puts an upper bound on the number of PCs -->
-                    <strong><a href="https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py">Importance of Feature Scaling</a></strong><br>
+<!--                    <strong><a href="https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py">Importance of Feature Scaling</a></strong><br>
                     <!-- <strong><a href="https://towardsai.net/p/data-science/how-when-and-why-should-you-normalize-standardize-rescale-your-data-3f083def38ff"> Scaling data</a> -->
-                    <strong><a href="https://seaborn.pydata.org/tutorial/introduction">Optional: An introduction to seaborn</a></strong>Seaborn is a high level API that uses matplotlib to generate many kinds of plots. It lets you plot common things (scatter, line, box, histogram) easily with 
+<!--                    <strong><a href="https://seaborn.pydata.org/tutorial/introduction">Optional: An introduction to seaborn</a></strong>Seaborn is a high level API that uses matplotlib to generate many kinds of plots. It lets you plot common things (scatter, line, box, histogram) easily with 
                         few lines of code. I use it for many things because there is less interaction with matplotlib's fiddley bits.<br>
                     <!--
                     https://towardsdatascience.com/autoencoders-vs-pca-when-to-use-which-73de063f5d7 Autoencoders verses PCA- OK article, essentially, use autoencoder when features have non linear relationship with each other, has OK examples
                     https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29-->
-                <br><strong>Homework</strong><BR>
+<!--                <br><strong>Homework</strong><BR>
                     <!-- SEE COMMENTED OUT NOTEBOOK ABOVE< DO THIS IN CLASS 1. Move the functions from 'Set up Transforms' section of <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a> 
                     notebook into a seperate package, import and use these functions in the notebook<br>  -->
-                    1. In the <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature Reduction</a> notebook, fill in t-SNE section, <mark>CAUTION: t-SNE is used just for visualization, not for dimensionality reduction since it does not preserve distance info.</mark><br>
+<!--                    1. In the <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature Reduction</a> notebook, fill in t-SNE section, <mark>CAUTION: t-SNE is used just for visualization, not for dimensionality reduction since it does not preserve distance info.</mark><br>
                     2. Time all 3 methods, PCA, t-SNE, and UMAP.  (Use %%time cell method) to get relative performance information specific to this problem.  BTW You should always consider algorithm efficiency (In computer science we use Big O notation as a proxy for this).  
                     But first and foremost you want the correct answer, PCA will get the same answer every time, while t-SNE will not given it's probablistic nature and potential to get stuck in local minima.  In other words, you likely get different answers on different runs for t-SNE (it may also find structure where none exists). OTOH, it generates pretty clusters.<br>
        
@@ -214,18 +216,18 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb" style="color: #00cc00"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
 
                 <!-- <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline, pre function migration to package</a></strong> USE THIS TO DEMO MOVING FUNCTIONS TO PACKAGE <br> -->          
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms (from above utils package) to a dataframe.  Pipelines streamline pre-processing <br>
+<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms (from above utils package) to a dataframe.  Pipelines streamline pre-processing <br>
                 <!-- a script which does all the data preprocessing steps shown in the jupyter notebook -->
-            </td>
+<!--            </td>
         </tr>
         <tr>
             <td class="style_white "><em>5</em></td>
             <!-- sample your dataset if it's huge to make it faster to iterate over development-->
                
-            <td class="style_white ">
+<!--            <td class="style_white ">
                 <strong>Lectures</strong><BR>
                        <!--UMAP for clustering?-->
-                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
+<!--                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
                      <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is. Includes all clustering algorithms</mak></B><br>
                      <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/kmeans_in_class_notes_for_board.pdf">BOARDWORK NOTES:kmeans clustering, elbow method, silhouette score</a></strong><br>
@@ -246,11 +248,11 @@
                         
                     <!-- FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
                     <!-- kmeans and heiarchical intro-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=blog&utm_medium=beginners-guide-hierarchical-clustering -->
-                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
+<!--                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
                     <!-- tuning DBSCAN and HDBSCAN and OPTICS http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/ -->
-                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
+<!--                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
                     <!-- <strong><a href="https://www.youtube.com/watch?v=7xHsRkOdVwo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=37">StatQuest: Heiarchical Clustering</a>  If I cover it<br> -->
-                    <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
+<!--                    <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
                     <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"> scikit-learn KMeans</a></strong> 
                     Sample code and methods, pay attention to fit, predict (for new data), inertia_ (quality measure, sum of squared distances of samples to closest cluster center). Consider using the KMeans++ method to initialize cluster centers to the K points furthest from one another<br>
                     <strong><a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html"> Selecting the number of clusters with silhouette analysis</a></strong> 
@@ -259,10 +261,10 @@
     <!--Maybe a little esoteric? Goes with notebook below 'Curse of Dimen...' <br><br><strong>Homework</strong><BR>
                  See if you can use numpy to vectorize the function get_distances(dims): in 51_curse_of_dimensionality.ipynb <br> -->
 
-            </td>
+<!--            </td>
             <td class="style_white ">
                 <!-- https://www.kaggle.com/code/vahidehdashti/simple-uber-eda-cab-ride-price-prediction/notebook  has 2 uber dataset with source and dest, and weather dataset. Use merges to record weather at source and destination -->
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
+<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
 
                 <br><br>Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
                 They are not meant for production environments since they tend to display lots of UI and require intervention to run each cell.  
@@ -273,7 +275,7 @@
                 
                 <strong>General steps to port a jupyter notebook to a python script:</strong><br>
                 <!--discussed nbconvert and its drawbacks (exports all code when you only want non-ui code).  Before doing any of this write on the board-->
-                <ol>
+<!--                <ol>
                 <li>Ignore all notebook code that explores the data (plotting with matplotlib, seaborn, various DataFrame statistics like unique and value_counts)</li>
                 <li>Export relevant functions to a python file (idealy in a seperate package for maximum flexibility).</li>
                 <li>Create a guarded section in the python file that runs only if it is executed as a script, not when it's imported as a module.  It will start with 'if __name__== "__main__":'</li>
@@ -286,7 +288,7 @@
 
 <!-- Maybe a little esoteric?                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/51_curse_of_dimensionality.ipynb">The curse of dimensionality</a></strong> Shows how data that is tightly clustered in low dimensions becomes sparse as dimensionality increases. 
                   This phenomena makes it harder to train ML models, and is why dimensionality reduction is so important.<br> Also has some interesting interactive plots. -->
-                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
+<!--                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
              
             </td>
         </tr>
@@ -320,13 +322,13 @@
                     The plot labeled 'Performance Comparison of Clustering Implementations' illustrates how these algorithms perform against each other.<br> 
                     
                      <!-- https://www.scikit-yb.org/en/latest/api/model_selection/index.html yellowbrick visualizers, also feature importance -->
-                    <strong><a href="https://www.scikit-yb.org/en/latest/api/cluster/index.html">Yellowbrick Visualizers</a></strong> 
+<!--                    <strong><a href="https://www.scikit-yb.org/en/latest/api/cluster/index.html">Yellowbrick Visualizers</a></strong> 
                     Elbow method, Silhouette, and Intercluster distance maps - work with KMeans<br>
                     <strong><a href=" https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012">Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra</a></strong> 
                     Discusses how to calculate eps in DBSCAN<br> 
                      <!--detailed copy verses view https://www.dataquest.io/blog/settingwithcopywarning/ -->
                    
-                    <br><strong>Homework</strong><BR> 
+<!--                    <br><strong>Homework</strong><BR> 
                     See sections 2.2,3.0 and 3.1 in <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/64_inclass_cluster_example.ipynb">In class Clustering example</a>                
             </td>
             <td class="style_white ">
@@ -362,20 +364,20 @@
  <br> -->
          
 
-                <br><strong>References</strong><BR>
+ <!--               <br><strong>References</strong><BR>
                     <strong><a href="https://www.practicaldatascience.org/html/views_and_copies_in_pandas.html">Views and Copies in pandas</a></strong>
                     Subsetting DataFrames in pandas will sometimes generate views, and sometimes copies.  It depends on the structure of the dataframe, and, if modifying, the kind of modification.  To be safe follow these rules; <b>"If you make a slice for any purpose other than immediately analyzing, you should add .copy() to that slice"</b><br>
                    <!-- https://www.kaggle.com/code/rafjaa/dealing-with-very-small-datasets/notebook  uses smote to generate minority class rows -->
-                    <strong><a href="https://nbviewer.org/gist/KhyatiMahendru/734da147385bcf630a42ba7c11cfc6c4?source=post_page">Credit Card Fraud Notebook that uses SMOTE to upsample the minority class</a></strong>Note what happenned when they used accuracy as a metric with the original unSMOTED data<br>
+<!--                    <strong><a href="https://nbviewer.org/gist/KhyatiMahendru/734da147385bcf630a42ba7c11cfc6c4?source=post_page">Credit Card Fraud Notebook that uses SMOTE to upsample the minority class</a></strong>Note what happenned when they used accuracy as a metric with the original unSMOTED data<br>
                     <strong><a href="https://www.analyticsvidhya.com/blog/2017/07/covariate-shift-the-hidden-problem-of-real-world-data-science/">Covariate Shift – Unearthing hidden problems in Real World Data Science</a>
                     <strong><a href="https://www.kaggle.com/code/alexisbcook/data-leakage">Kaggle- Data Leakage</a> What happens if independant variable values are changed after target variable is encoded?  Or when you run data transforms prior to train/test split?  Answer: your model is less predictive<br>
                     <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
                 <!--71_  uses np.vectorize-->
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb">Splitting a dataset</a></strong> <br>
+<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb">Splitting a dataset</a></strong> <br>
     <!--NOT FOR Spring 23 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb">OLS Linear Regression</a></strong><br> -->
-                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix.</a></strong>Illustration of, and how to solve, the 'A value is trying to be set on a copy of a slice from a DataFrame' problem. <br>
+<!--                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix.</a></strong>Illustration of, and how to solve, the 'A value is trying to be set on a copy of a slice from a DataFrame' problem. <br>
              
             </td>
         </tr> 
@@ -389,7 +391,7 @@
                     <strong><a href="https://www.youtube.com/watch?v=7VeUPuFGJHk">StatQuest: Decision Trees</a></strong>Very good explanation of how to choose the next feature to split on based on information gain<br>
                     <!-- Just a good outline plus a plot of the decision regions <strong><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_iris.html#sphx-glr-auto-examples-ensemble-plot-forest-iris-py">Plot the decision surfaces of ensembles of trees on the iris dataset¶</a> -->
                     
-                    <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition- follows 09_tabular.ipynb in <a href="https://github.com/fastai/fastbook">this excellent online book</a>.
+<!--                    <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition- follows 09_tabular.ipynb in <a href="https://github.com/fastai/fastbook">this excellent online book</a>.
                         <ol>
                             <li>Read this <a href="https://www.kaggle.com/code/alexisbcook/getting-started-with-kaggle-competitions">Getting Started with Kaggle Competitions</a></li>
                             <li>Sign up for a <a href="https://www.kaggle.com/">Kaggle</a> account</li>
@@ -412,7 +414,7 @@
             <td class="style_white ">
                 <strong>Lectures</strong><BR> 
                 <strong>Random Forest Introduction-on whiteboard</strong><!--see notes in week 9--><br>
-                <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week9/91_crossval_hyperparam_tune_trees.pdf">Cross Validation and hyperparameter tuning</a></strong>How to tune hyperparameters on a model to give optimal performence for a particular dataset<br>
+<!--                <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week9/91_crossval_hyperparam_tune_trees.pdf">Cross Validation and hyperparameter tuning</a></strong>How to tune hyperparameters on a model to give optimal performence for a particular dataset<br>
                   
 
                 <br><strong>References</strong><BR>
@@ -423,25 +425,25 @@
                 <strong><a href="https://youtu.be/fDQkUN9yw44"> Bias, Variance</a></strong>How to see if your model overfits or underfits or is just right<br>
                 <!--get the bias variance targets, then graph then cross validation to tune hyperparameters (for RF), then train on full dataset (minus holdout) then the error-->
                 <!-- just the first graph showing training error and validation error  <strong><a href="https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9">The Bias-Variance Tradeoff</a><br> -->
-                <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.
+ <!--               <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.
                 A Random forest will not overfit by adding more trees, it will overfit based on other hyperparameters though. How to choose correct values for hyperparameters?  <br>
                 <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn cross validation</a></strong>A detailed explanation.  Pay attention to stratified cross validation, a way to use cross validation on imbalanced datasets<br>
                 <br>
                <!--Sebastian Raschke notebooks including optuna examples, really good https://github.com/rasbt/machine-learning-notes/tree/main/hyperparameter-tuning-methods-->
-                You can use scikitlearn and optuna to do cross validation and hyperparameter tuning.  The best endorsement for Optuna is that it's very well respected and widely used by the cut throat data science competitors at Kaggle<br>
+<!--                You can use scikitlearn and optuna to do cross validation and hyperparameter tuning.  The best endorsement for Optuna is that it's very well respected and widely used by the cut throat data science competitors at Kaggle<br>
                 <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation">scikit-learn - cross validation</a><br>
                     <!-- <strong><a href="https://scikit-learn.org/stable/modules/grid_search.html#grid-search">scikit-learn - hyper-parameter tuning</a><br>
                     -->
  
-                <strong><a href="https://colab.research.google.com/github/optuna/optuna-examples/blob/main/quickstart.ipynb#scrollTo=-cWafqOdRghs">Optuna Example-hosted on Google Colab:  Selecting best hyperparameters for a Random Forest Classifier</a><br>
+ <!--               <strong><a href="https://colab.research.google.com/github/optuna/optuna-examples/blob/main/quickstart.ipynb#scrollTo=-cWafqOdRghs">Optuna Example-hosted on Google Colab:  Selecting best hyperparameters for a Random Forest Classifier</a><br>
                 <!--Run the following notebook in class!  Its an excellent introduction-->
-                <strong><a href="https://www.kaggle.com/bextuychiev/no-bs-guide-to-hyperparameter-tuning-with-optuna">No BS Guide to Hyperparameter Tuning With Optuna</a><br>
+<!--                <strong><a href="https://www.kaggle.com/bextuychiev/no-bs-guide-to-hyperparameter-tuning-with-optuna">No BS Guide to Hyperparameter Tuning With Optuna</a><br>
                 <strong><a href=" https://optuna.org/">How to pass multiple arguments to Optunas objective function</a><br>     
                 <strong><a href=" https://optuna.org/">Optuna - home page </a><br>
 
                 <!--cross validation-->
                    
-                    <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition.
+<!--                    <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition.
                         <ol>
                             <li>Load the data</li>
                             <li>Convert saledate string to datetime then </li>
@@ -465,7 +467,7 @@
             <td class="style_white ">
                 <!-- <strong style="color: #cc0000">Test, 4/13/22.  Includes everything since 2/21/22 (week 7).Will be hosted on gitlab and/or given on paper<br></strong> -->
 
-                <strong>Lectures</strong><BR>    
+<!--                <strong>Lectures</strong><BR>    
                     <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always). Other measures that do a better job of evaluating model performence <br>
                 <br>
                     <strong><mark>Explainable AI - maybe the most interesting part of this class</mark><br>
@@ -482,7 +484,7 @@
                     <!-- -Random Forest built in Feature Importance method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
                     Permutation Importance.  Works for any model.  Scramble the data in one column and then measures how model performence drops, if you do this for all columns then you have a notion of a features importence from the models perspective. Use these importances to rank features.  Leads to interesting conclusions. 
                     For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>-->
-                    <strong>Algorithms that show prediction changes as feature(s) are permuted.<br>
+<!--                    <strong>Algorithms that show prediction changes as feature(s) are permuted.<br>
                     </strong> Lets you ask questions of a model (see'PDP and ICE plots' notebook to the right ). 2 algorithms to consider<br>
                     
                     ICE plots : measures the effect on target prediction when permuting column(s) on 1 row.<br>
@@ -513,7 +515,7 @@
                 <!-- Should I do confidence intervals? <strong><a href="http://contrib.scikit-learn.org/forest-confidence-interval">Confidence Intervals for Scikit Learn Random Forests</a><br>
                 <strong><a href="https://www.mathsisfun.com/data/confidence-interval.html">Confidence Intervals</a>In case you forgot<br> -->
 
-                    <br><strong>References: Explainable AI</strong><BR>
+<!--                    <br><strong>References: Explainable AI</strong><BR>
 
                     <strong><a href="https://scikit-learn.org/stable/modules/partial_dependence.html"> Partial Dependence and Individual Conditional Expectation plots</a></strong><br>
                     <strong><a href="https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py">Partial Dependence and Individual Conditional Expectation Plots-Code</a></strong><br>
@@ -527,7 +529,7 @@
                         2. How to recognize correlated features, when to remove them.<br>
                         3. How to split a dataset<br>
                         <!-- 4. How to calculate Gini impurity on a small dataset( see Supervised- Decision Trees Lecture)<br> -->
-                        5. What is cross validation, how to implement it, what does it do, what are it's drawbacks.<br>
+<!--                        5. What is cross validation, how to implement it, what does it do, what are it's drawbacks.<br>
                         6. Why and how should you use a framework like Optuna.<br>
                         7. Accuracy is a good measure for balanced datasets only.<br>
                         8. Given a particular dataset, what will your model likely be best at predicting? What will it be worst at predicting?<br>
@@ -556,7 +558,7 @@
                 <br>
                 <!--Partial Dependence and Individual Conditional Expectation Plots https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py
                     https://scikit-learn.org/stable/modules/partial_dependence.html -->
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb">Permutation importance (and RandomForestClassifier's built in feature importance)</a></strong>How to tell what the model thinks is imortant<br>
+<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb">Permutation importance (and RandomForestClassifier's built in feature importance)</a></strong>How to tell what the model thinks is imortant<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_3_PDP_plots_ICE.ipynb">PDP and ICE plots</a></strong><br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/datasets/melb_data_cleaned.feather">Cleaned version of Melbourne housing dataset</a></strong> Goes with above notebook<br>
                 <br>
@@ -598,12 +600,12 @@
 
 
 
-                <br><strong>References</strong><BR>
+ <!--               <br><strong>References</strong><BR>
                 <strong><a href="https://www.youtube.com/watch?v=2AQKmw14mHM">Statquest: R-squared, Clearly Explained!!!</a></strong> This is the default measure used for sklearn random forest regressor, lightGBM boosted tree regressor, and catboost boosted tree regressor<br>
                 <strong><a href="https://www.kaggle.com/learn/time-series">Kaggle: Time Series short course</a></strong> A good introduction to forcasting with time series data<br>
                 <!-- <a href="https://www.kaggle.com/code/bextuychiev/every-pandas-function-to-manipulate-time-series/notebook">Every Pandas Function to Manipulate Time Series</a> -->
     
-                <br><strong>Homework</strong><BR>                 
+<!--                <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_12/12_1_boostedtrees.ipynb">Boosted Trees</a></strong>Compares Random Forest, LightGBM and Catboost for both regression and classification tasks.  Catboost is the winner in terms of speed and overall accuracy (at least for these datasets and these tasks), see documentation in first cell for further comparisons.<br>
@@ -632,7 +634,7 @@
                     <!-- Autocorrelation is simply the correlation of a series with its own lags. If a series is significantly autocorrelated, that means, the previous values of the series (lags) may 
                         be helpful in predicting the current value.
                         Partial Autocorrelation also conveys similar information but it conveys the pure correlation of a series and its lag, excluding the correlation contributions from the intermediate lags. -->
-                        <strong><a href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></strong><br>
+<!--                        <strong><a href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></strong><br>
  
                         <!-- <strong ><a href="https://github.com/CNUClasses/DATA301/blob/master/content/tests/test2_solution.pdf" style="color: #cc0000">Test 2 SOLUTION</a></strong> <br>  -->
                     <!-- <strong ><a href="https://towardsdatascience.com/5-ways-to-detect-outliers-that-every-data-scientist-should-know-python-code-70a54335a623">5 Ways to Detect Outliers/Anomalies That Every Data Scientist Should Know (Python Code)</a><br>
@@ -644,11 +646,10 @@
                         https://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science/eif.html  extended isolation forest, better than isolation forest?
                      -->
 
-                    <strong style="color: #cc0000">Final exam <a href="https://student-gitlab.pcs.cnu.edu/cpsc301-crn8075-s23/final.git">posted on gitlab</a> due 5/3/23 by 5pm.</a></strong><br>
+<!--                    <strong style="color: #cc0000">Final exam <a href="https://student-gitlab.pcs.cnu.edu/cpsc301-crn8075-s23/final.git">posted on gitlab</a> due 5/3/23 by 5pm.</a></strong><br>
                     <br></strong>
                         <!-- Final exam posted under projects tab, due 5/4/22 midnight.<br></strong> -->
-                    <!-- If you would like to do a final project in lieu of a final exam let me know your plans by Saturday 4/23/22, so we can agree on deliverables<br></strong> -->
-                <br><strong>Homework</strong><BR>   
+<!--                <br><strong>Homework</strong><BR>   
                     <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition.
                         <ol>
                             <li>Add a time field for linear regressor portion of time series model</li>
@@ -679,5 +680,5 @@
         </tr> 
 
                    
-      
+    -->     
         </table>
