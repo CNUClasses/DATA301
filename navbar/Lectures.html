@@ -188,8 +188,8 @@
                  <br><strong>References</strong><BR>
                  
                     <strong><a href="https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355 ">Python Packages tutorial</a></strong>Does not include namespace packages<br>
-                    <!--excellent tutorial  https://www.kaggle.com/alexisbcook/pipelines -->
-                    <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pipelines- a way to iteratively apply a list of functions to a dataframe</a></strong>An excellent way to simplify and streamline data pre processing.<br>
+                    <strong><a href="https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py">Importance of Feature Scaling</a></strong><br>
+                  
                     <br>
                     Feature reduction techniques:PCA is linear and deterministic, UMAP is not, different runs with the same hyperparameters can yield different results.  PCA converges faster than UMAP<br>
                     <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), A Step-by-Step introduction</a></strong><br>
@@ -197,8 +197,10 @@
                     <strong><a href="https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29">Dimensionality Reduction for Data Visualization: PCA vs TSNE vs UMAP vs LDA</a></strong>You can vie the archival version of this article <a href="https://archive.ph/2YdOX#selection-285.0-285.75">here</a>. BTW, to access pre-payway medium articles, install the 'Medium parser' browser extension<br><br
                     <BR>
                     <!-- https://www.youtube.com/watch?v=oRvgq966yZg -- if fewer samples than variables then the number of samples puts an upper bound on the number of PCs -->
-                    <strong><a href="https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py">Importance of Feature Scaling</a></strong><br>
                     <!-- <strong><a href="https://towardsai.net/p/data-science/how-when-and-why-should-you-normalize-standardize-rescale-your-data-3f083def38ff"> Scaling data</a> -->
+                    <!--excellent tutorial  https://www.kaggle.com/alexisbcook/pipelines -->
+                    <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pipelines- a way to iteratively apply a list of functions to a dataframe</a></strong>An excellent way to simplify and streamline data pre processing.<br>
+                        
                     <strong><a href="https://seaborn.pydata.org/tutorial/introduction">Optional: An introduction to seaborn</a></strong>Seaborn is a high level API that uses matplotlib to generate many kinds of plots. It lets you plot common things (scatter, line, box, histogram) easily with 
                         few lines of code. I use it for many things because there is less interaction with matplotlib's fiddley bits.<br>
                     <!--
@@ -213,16 +215,16 @@
        
             </td>
             <td class="style_white ">
+                <strong><a href="https://github.com/CNUClasses/utils.git" style="color: #00cc00">the utils package</a></strong>A collection of reusable utilities that come in handy for many notebooks. See README.md for more information<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb" style="color: #00cc00"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
+<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Scaling Numerical Data</a></strong> After all categorical variables have been converted to numerical data, scale them with these transforms. (Note: this is required in order to use this data as input to many ML algorithms)<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature reduction</a></strong>Removing highly correlated features <strong>and</strong> using PCA for feature reduction--
                 See Albon, recipes 9.1 and 10.3 for PCA and Removing highly correlated features.  Do these 2 steps <strong>after</strong> categorical data has been converted to numerical data<br><br>
-
                             
-                The following 3 notebooks demonstrate; using the package created in the left pane and pipelines.  Both are useful when porting a notebook to a script. 
+                The following notebook demonstrates using the util package(created above) and pipelines.  Both are useful when porting a notebook to a script. 
                 <br>
-                <strong><a href="https://github.com/CNUClasses/utils.git" style="color: #00cc00">the utils package</a></strong>A collection of reusable utilities that come in handy for many notebooks. See README.md for more information<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb" style="color: #00cc00"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
-
+             
                 <!-- <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline, pre function migration to package</a></strong> USE THIS TO DEMO MOVING FUNCTIONS TO PACKAGE <br> -->          
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms (from above utils package) to a dataframe.  Pipelines streamline pre-processing <br>
                 <!-- a script which does all the data preprocessing steps shown in the jupyter notebook -->
