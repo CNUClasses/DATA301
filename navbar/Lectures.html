@@ -163,9 +163,7 @@
                  <strong>References</strong><BR>
                     Chapter 7 in McKinney <br>
                     Chapter 10, up to section 10.3, 'Suppressing the Group Keys'<br><br>
-                    <!--excellent clustering and LLM example https://github.com/CNUClasses/Clustering-with-LLM.git, see article https://towardsdatascience.com/mastering-customer-segmentation-with-llm-3d9008235f41-->
-                    <!-- https://www.statology.org/cluster-analysis-real-life-examples/ -->
-                <!-- <a href="https://towardsdatascience.com/how-to-structure-your-data-science-workflow-b06748b7761a>EXCELLENT- Full exploration and solution using titanic dataset,exploration is great, see the catplot for male/female survival</a> -->
+                 <!-- <a href="https://towardsdatascience.com/how-to-structure-your-data-science-workflow-b06748b7761a>EXCELLENT- Full exploration and solution using titanic dataset,exploration is great, see the catplot for male/female survival</a> -->
                 <strong>Homework</strong><BR>
                     See if you can replace map with apply in the <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_2/24_cleaning_strings.ipynb">Cleaning Strings</a></strong> notebook<br> section 1.13,"Add a new column to track the changed columns"<br> 
            </td>
@@ -221,23 +219,27 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Scaling Numerical Data</a></strong> After all categorical variables have been converted to numerical data, scale them with these transforms. (Note: this is required in order to use this data as input to many ML algorithms)<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature reduction</a></strong>Removing highly correlated features <strong>and</strong> using PCA for feature reduction--
                 See Albon, recipes 9.1 and 10.3 for PCA and Removing highly correlated features.  Do these 2 steps <strong>after</strong> categorical data has been converted to numerical data<br><br>
-                            
-                The following notebook demonstrates using the util package(created above) and pipelines.  Both are useful when porting a notebook to a script. 
-                <br>
-             
-                <!-- <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline, pre function migration to package</a></strong> USE THIS TO DEMO MOVING FUNCTIONS TO PACKAGE <br> -->          
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess.ipynb">A data pre-processing Pipeline</a></strong> A way to iteratively apply a list of transforms (from above utils package) to a dataframe.  Pipelines streamline pre-processing <br>
-                <!-- a script which does all the data preprocessing steps shown in the jupyter notebook -->
+                    
+                Pipelines are a way to iteratively apply a list of functions to a dataframe. Once written a pipeline defines the order that data cleaning steps are applied.  Pipelines streamline pre-processing and gurantee consistant and repeatable results<br>
+                The following notebooks demonstrates pipelines.  The first is used to debug the pipeline functions in the notebook itself. The second shows significant code reduction after the debugged functions have been ported to the utils package.  The functions are now available for use in other notebooks and scripts.<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline</a></strong> Use this notebook to debug functions in the notebook itself, after functions debugged, port them to utils package<br>          
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_after_moving_functions_into_utils.ipynb">A data pre-processing Pipeline</a></strong>Imports functions from utils package.<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A script which does all the data preprocessing steps shown in the above jupyter notebook</a></strong> Imports functions from utils package.<br>
+ 
+
             </td>
         </tr>
-<!--        <tr>
+        <tr>
             <td class="style_white "><em>5</em></td>
             <!-- sample your dataset if it's huge to make it faster to iterate over development-->
                
-<!--            <td class="style_white ">
+            <td class="style_white ">
                 <strong>Lectures</strong><BR>
-                       <!--UMAP for clustering?-->
-<!--                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
+                    <!--UMAP for clustering?-->
+                    <!--excellent clustering and LLM example https://github.com/CNUClasses/Clustering-with-LLM.git, see article https://towardsdatascience.com/mastering-customer-segmentation-with-llm-3d9008235f41-->
+                    <!-- https://www.statology.org/cluster-analysis-real-life-examples/ -->
+               
+                    <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
                      <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is. Includes all clustering algorithms</mak></B><br>
                      <strong><a href="https://github.com/CNUClasses/DATA301/blob/master/content/lectures/week5/kmeans_in_class_notes_for_board.pdf">BOARDWORK NOTES:kmeans clustering, elbow method, silhouette score</a></strong><br>
@@ -258,23 +260,24 @@
                         
                     <!-- FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
                     <!-- kmeans and heiarchical intro-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=blog&utm_medium=beginners-guide-hierarchical-clustering -->
-<!--                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
+                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
                     <!-- tuning DBSCAN and HDBSCAN and OPTICS http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/ -->
-<!--                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
+                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
                     <!-- <strong><a href="https://www.youtube.com/watch?v=7xHsRkOdVwo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=37">StatQuest: Heiarchical Clustering</a>  If I cover it<br> -->
-<!--                    <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
+                    <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
                     <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"> scikit-learn KMeans</a></strong> 
                     Sample code and methods, pay attention to fit, predict (for new data), inertia_ (quality measure, sum of squared distances of samples to closest cluster center). Consider using the KMeans++ method to initialize cluster centers to the K points furthest from one another<br>
                     <strong><a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html"> Selecting the number of clusters with silhouette analysis</a></strong> 
                     
                     
-    <!--Maybe a little esoteric? Goes with notebook below 'Curse of Dimen...' <br><br><strong>Homework</strong><BR>
+    <!--Maybe a little esoteric? Goes with notebook below 'Curse of Dimen...' 
+                <br><br><strong>Homework</strong><BR>
                  See if you can use numpy to vectorize the function get_distances(dims): in 51_curse_of_dimensionality.ipynb <br> -->
 
-<!--            </td>
+            </td>
             <td class="style_white ">
                 <!-- https://www.kaggle.com/code/vahidehdashti/simple-uber-eda-cab-ride-price-prediction/notebook  has 2 uber dataset with source and dest, and weather dataset. Use merges to record weather at source and destination -->
-<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
 
                 <br><br>Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
                 They are not meant for production environments since they tend to display lots of UI and require intervention to run each cell.  
@@ -285,7 +288,7 @@
                 
                 <strong>General steps to port a jupyter notebook to a python script:</strong><br>
                 <!--discussed nbconvert and its drawbacks (exports all code when you only want non-ui code).  Before doing any of this write on the board-->
-<!--                <ol>
+                <ol>
                 <li>Ignore all notebook code that explores the data (plotting with matplotlib, seaborn, various DataFrame statistics like unique and value_counts)</li>
                 <li>Export relevant functions to a python file (idealy in a seperate package for maximum flexibility).</li>
                 <li>Create a guarded section in the python file that runs only if it is executed as a script, not when it's imported as a module.  It will start with 'if __name__== "__main__":'</li>
@@ -296,13 +299,13 @@
                 
                 
 
-<!-- Maybe a little esoteric?                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/51_curse_of_dimensionality.ipynb">The curse of dimensionality</a></strong> Shows how data that is tightly clustered in low dimensions becomes sparse as dimensionality increases. 
+    <!-- Maybe a little esoteric?                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/51_curse_of_dimensionality.ipynb">The curse of dimensionality</a></strong> Shows how data that is tightly clustered in low dimensions becomes sparse as dimensionality increases. 
                   This phenomena makes it harder to train ML models, and is why dimensionality reduction is so important.<br> Also has some interesting interactive plots. -->
-<!--                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
+               <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
              
             </td>
         </tr>
-        <tr>
+<!--       <tr>
             <td class="style_white "><em>6</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>  
