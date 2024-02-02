@@ -220,12 +220,27 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature reduction</a></strong>Removing highly correlated features <strong>and</strong> using PCA for feature reduction--
                 See Albon, recipes 9.1 and 10.3 for PCA and Removing highly correlated features.  Do these 2 steps <strong>after</strong> categorical data has been converted to numerical data<br><br>
                     
-                Pipelines are a way to iteratively apply a list of functions to a dataframe. Once written a pipeline defines the order that data cleaning steps are applied.  Pipelines streamline pre-processing and gurantee consistant and repeatable results<br>
-                The following notebooks demonstrates pipelines.  The first is used to debug the pipeline functions in the notebook itself. The second shows significant code reduction after the debugged functions have been ported to the utils package.  The functions are now available for use in other notebooks and scripts.<br>
+                <b>Pipelines</b><br>Pipelines are a way to iteratively apply a list of functions to a dataframe. Once written a pipeline defines the order that data cleaning steps are applied.  Pipelines streamline pre-processing and gurantee consistant and repeatable results<br>
+                The following notebooks demonstrate pipelines.  The first is used to debug the pipeline functions in the notebook itself. The second shows significant code reduction after the debugged functions have been ported to the utils package.  The functions are now available for use in other notebooks and scripts.<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline</a></strong> Use this notebook to debug functions in the notebook itself, after functions debugged, port them to utils package<br>          
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_after_moving_functions_into_utils.ipynb">A data pre-processing Pipeline</a></strong>Imports functions from utils package.<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A script which does all the data preprocessing steps shown in the above jupyter notebook</a></strong> Imports functions from utils package.<br>
- 
+                <br>Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
+                They are not meant for production environments since they tend to display lots of UI and require intervention to run each cell.  
+                If your notebook is purely exploratory, that is it only plots various aspects of data, then you need do nothing else. 
+                If however, your notebook produces something (like a processed dataset), then it's a good idea to port it's relevant content to a script that requires no user interaction, and displays no UI. This approach has the following advantages:<br>
+                1. It ensures repeatable results since the script always executes the same way.<br>
+                2. The script can be executed by another script, which means it can be a building block used in other processes.<br><br>
+                
+                <strong>General steps to port a jupyter notebook to a python script:</strong><br>
+                <!--discussed nbconvert and its drawbacks (exports all code when you only want non-ui code).  Before doing any of this write on the board-->
+                <ol>
+                <li>Ignore all notebook code that explores the data (plotting with matplotlib, seaborn, various DataFrame statistics like unique and value_counts)</li>
+                <li>Export relevant functions to a python file (idealy in a seperate package for maximum flexibility).</li>
+                <li>Create a guarded section in the python file that runs only if it is executed as a script, not when it's imported as a module.  It will start with 'if __name__== "__main__":'</li>
+                <li>Place all code that should run in this guarded section.</li>
+                </ol>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline'.  Imports functions from utils. <br>
+     
 
             </td>
         </tr>
@@ -279,23 +294,7 @@
                 <!-- https://www.kaggle.com/code/vahidehdashti/simple-uber-eda-cab-ride-price-prediction/notebook  has 2 uber dataset with source and dest, and weather dataset. Use merges to record weather at source and destination -->
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
 
-                <br><br>Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
-                They are not meant for production environments since they tend to display lots of UI and require intervention to run each cell.  
-                If your notebook is purely exploratory, that is it only plots various aspects of data, then you need do nothing else. 
-                If however, your notebook produces something (like a processed dataset), then it's a good idea to port it's relevant content to a script that requires no user interaction, and displays no UI. This approach has the following advantages:<br>
-                1. It ensures repeatable results since the script always executes the same way.<br>
-                2. The script can be executed by another script, which means it can be a building block used in other processes.<br><br>
-                
-                <strong>General steps to port a jupyter notebook to a python script:</strong><br>
-                <!--discussed nbconvert and its drawbacks (exports all code when you only want non-ui code).  Before doing any of this write on the board-->
-                <ol>
-                <li>Ignore all notebook code that explores the data (plotting with matplotlib, seaborn, various DataFrame statistics like unique and value_counts)</li>
-                <li>Export relevant functions to a python file (idealy in a seperate package for maximum flexibility).</li>
-                <li>Create a guarded section in the python file that runs only if it is executed as a script, not when it's imported as a module.  It will start with 'if __name__== "__main__":'</li>
-                <li>Place all code that should run in this guarded section.</li>
-                </ol>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline' <br>
-                <!-- see projects/proj2 folder <strong><a href="">Something Different: What can we figure out about people without doing much of anything to the data</a></strong>Uses a larger version of the marketing dataset you are working on for project 2<br> -->
+                           <!-- see projects/proj2 folder <strong><a href="">Something Different: What can we figure out about people without doing much of anything to the data</a></strong>Uses a larger version of the marketing dataset you are working on for project 2<br> -->
                 
                 
 
