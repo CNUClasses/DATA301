@@ -194,7 +194,8 @@
                     Feature reduction techniques:PCA is linear and deterministic, UMAP is not, different runs with the same hyperparameters can yield different results.  PCA converges faster than UMAP<br>
                     <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), A Step-by-Step introduction</a></strong><br>
                     <strong><a href="https://pair-code.github.io/understanding-umap">Understanding UMAP</a></strong>UMAP is a non-linear dimensionality reduction technique.  It is useful when you have non-linear relationships between features.  It is also useful when you have a large number of features.  It is not useful when you have a small number of samples.<br>
-                    <strong><a href="https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29">Dimensionality Reduction for Data Visualization: PCA vs TSNE vs UMAP vs LDA</a></strong>You can vie the archival version of this article <a href="https://archive.ph/2YdOX#selection-285.0-285.75">here</a>. BTW, to access pre-payway medium articles, install the 'Medium parser' browser extension<br><br
+                    <strong><a href="https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29">Dimensionality Reduction for Data Visualization: PCA vs TSNE vs UMAP vs LDA</a></strong>You can vie the archival version of this article <a href="https://archive.ph/2YdOX#selection-285.0-285.75">here</a>. BTW, to access pre-paywall medium articles, install the 'Medium parser' browser extension<br><br>
+                    <strong><a href="https://www.pinecone.io/learn/dimensionality-reduction/">Straightforward Guide to Dimensionality Reduction</a>PCA, t-SNE and UMAP explanations with a bonus figure that intuitively covers the curse of dimensionality</strong>
                     <BR>
                     <!-- https://www.youtube.com/watch?v=oRvgq966yZg -- if fewer samples than variables then the number of samples puts an upper bound on the number of PCs -->
                     <!-- <strong><a href="https://towardsai.net/p/data-science/how-when-and-why-should-you-normalize-standardize-rescale-your-data-3f083def38ff"> Scaling data</a> -->
@@ -355,16 +356,16 @@
                 
             </td>
         </tr> 
-<!--
+
 
         <tr>
             <td class="style_white "><em>7</em></td>
             <td class="style_white ">
-                <strong style="color: #cc0000">Test, 3/1/23.  Includes everything through week 6 above and projects 1 and 2. Concentrate on;<BR>
-                    please know how to merge dataframes<br>
-                    please be familiar with groupby across multiple columns (see groupby and apply notebook from week 3)<br>
+                <strong style="color: #cc0000">Test, 3/13/24.  Includes everything through week 6 and projects 1 and 2. Concentrate on;<BR>
+                    How to merge dataframes<br>
+                    Using groupby across multiple columns (see groupby and apply notebook from week 3)<br>
                     please be familiar with all of project 2 including;<br>
-                    -cleaning data (nulls, duplicates, catagoricals, no variance, high variance, correlations)<br>
+                    -cleaning data (nulls, duplicates, catagoricals, no variance, high variance, correlations, etc)<br>
                     -scaling data and applying pca<br>
                     -how to run scaled data through hdbscan and kmeans clustering algorithms<br>
                     
@@ -379,24 +380,24 @@
  <br> -->
          
 
- <!--               <br><strong>References</strong><BR>
+               <br><strong>References</strong><BR>
                     <strong><a href="https://www.practicaldatascience.org/html/views_and_copies_in_pandas.html">Views and Copies in pandas</a></strong>
                     Subsetting DataFrames in pandas will sometimes generate views, and sometimes copies.  It depends on the structure of the dataframe, and, if modifying, the kind of modification.  To be safe follow these rules; <b>"If you make a slice for any purpose other than immediately analyzing, you should add .copy() to that slice"</b><br>
                    <!-- https://www.kaggle.com/code/rafjaa/dealing-with-very-small-datasets/notebook  uses smote to generate minority class rows -->
-<!--                    <strong><a href="https://nbviewer.org/gist/KhyatiMahendru/734da147385bcf630a42ba7c11cfc6c4?source=post_page">Credit Card Fraud Notebook that uses SMOTE to upsample the minority class</a></strong>Note what happenned when they used accuracy as a metric with the original unSMOTED data<br>
+                    <strong><a href="https://nbviewer.org/gist/KhyatiMahendru/734da147385bcf630a42ba7c11cfc6c4?source=post_page">Credit Card Fraud Notebook that uses SMOTE to upsample the minority class</a></strong>Note what happenned when they used accuracy as a metric with the original unSMOTED data<br>
                     <strong><a href="https://www.analyticsvidhya.com/blog/2017/07/covariate-shift-the-hidden-problem-of-real-world-data-science/">Covariate Shift – Unearthing hidden problems in Real World Data Science</a>
                     <strong><a href="https://www.kaggle.com/code/alexisbcook/data-leakage">Kaggle- Data Leakage</a> What happens if independant variable values are changed after target variable is encoded?  Or when you run data transforms prior to train/test split?  Answer: your model is less predictive<br>
                     <br><strong>Homework</strong><BR>                 
             </td>
             <td class="style_white ">
                 <!--71_  uses np.vectorize-->
-<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb">Splitting a dataset</a></strong> <br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb">Splitting a dataset</a></strong> <br>
     <!--NOT FOR Spring 23 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb">OLS Linear Regression</a></strong><br> -->
-<!--                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix.</a></strong>Illustration of, and how to solve, the 'A value is trying to be set on a copy of a slice from a DataFrame' problem. <br>
+                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix.</a></strong>Illustration of, and how to solve, the 'A value is trying to be set on a copy of a slice from a DataFrame' problem. <br>
              
             </td>
         </tr> 
-        <tr>
+ <!--       <tr>
             <td class="style_white "><em>8</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>  
