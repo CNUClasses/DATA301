@@ -195,6 +195,7 @@
                     <strong><a href="https://pair-code.github.io/understanding-umap">Understanding UMAP</a></strong>UMAP is a non-linear dimensionality reduction technique.  It is useful when you have non-linear relationships between features.  It is also useful when you have a large number of features.  It is not useful when you have a small number of samples.<br>
                     <strong><a href="https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29">Dimensionality Reduction for Data Visualization: PCA vs TSNE vs UMAP vs LDA</a></strong>You can vie the archival version of this article <a href="https://archive.ph/2YdOX#selection-285.0-285.75">here</a>. BTW, to access pre-paywall medium articles, install the 'Medium parser' browser extension<br><br>
                     <strong><a href="https://www.pinecone.io/learn/dimensionality-reduction/">Straightforward Guide to Dimensionality Reduction</a>PCA, t-SNE and UMAP explanations with a bonus figure that intuitively covers the curse of dimensionality</strong>
+                    <strong><a href="https://projector.tensorflow.org/">Embeddings Projector</a></strong> A tool to visualize high dimensional.  It reduces data to 2 or 3 dimensions then projects it. It is useful for interactively visualizing the output of PCA, t-SNE, and UMAP.  It will also give you a feeling for the speed of these algorithms<BR>
                     <BR>
                     <!-- https://www.youtube.com/watch?v=oRvgq966yZg -- if fewer samples than variables then the number of samples puts an upper bound on the number of PCs -->
                     <!-- <strong><a href="https://towardsai.net/p/data-science/how-when-and-why-should-you-normalize-standardize-rescale-your-data-3f083def38ff"> Scaling data</a> -->
@@ -254,7 +255,8 @@
                 <strong>Lectures</strong><BR>
                     <!--UMAP for clustering?-->
                     <!--excellent clustering and LLM example https://github.com/CNUClasses/Clustering-with-LLM.git, see article https://towardsdatascience.com/mastering-customer-segmentation-with-llm-3d9008235f41-->
-                    <!-- https://www.statology.org/cluster-analysis-real-life-examples/ -->
+                    <!-- https://www.statology.org/cluster-analysis-real-life-examples/ 
+                    https://stats.stackexchange.com/questions/133656/how-to-understand-the-drawbacks-of-k-means/133694#133694-->
                
                     <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
@@ -383,7 +385,7 @@
                <br><strong>References</strong><BR>
                     <strong><a href="https://www.practicaldatascience.org/html/views_and_copies_in_pandas.html">Views and Copies in pandas</a></strong>
                     Subsetting DataFrames in pandas will sometimes generate views, and sometimes copies.  It depends on the structure of the dataframe, and, if modifying, the kind of modification.  To be safe follow these rules; <b>"If you make a slice for any purpose other than immediately analyzing, you should add .copy() to that slice"</b><br>
-                   <!-- https://www.kaggle.com/code/rafjaa/dealing-with-very-small-datasets/notebook  uses smote to generate minority class rows -->
+                    <!-- <strong><a href="https://www.kaggle.com/code/rafjaa/dealing-with-very-small-datasets/notebook">Notebook that uses SMOTE to generate minority class rows</a><br>   -->
                     <strong><a href="https://nbviewer.org/gist/KhyatiMahendru/734da147385bcf630a42ba7c11cfc6c4?source=post_page">Credit Card Fraud Notebook that uses SMOTE to upsample the minority class</a></strong>Note what happenned when they used accuracy as a metric with the original unSMOTED data<br>
                     <strong><a href="https://www.analyticsvidhya.com/blog/2017/07/covariate-shift-the-hidden-problem-of-real-world-data-science/">Covariate Shift – Unearthing hidden problems in Real World Data Science</a>
                     <strong><a href="https://www.kaggle.com/code/alexisbcook/data-leakage">Kaggle- Data Leakage</a> What happens if independant variable values are changed after target variable is encoded?  Or when you run data transforms prior to train/test split?  Answer: your model is less predictive<br>
@@ -397,7 +399,7 @@
              
             </td>
         </tr> 
- <!--       <tr>
+       <tr>
             <td class="style_white "><em>8</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>  
@@ -405,9 +407,9 @@
                                  
                 <br><strong>References</strong><BR>
                     <strong><a href="https://www.youtube.com/watch?v=7VeUPuFGJHk">StatQuest: Decision Trees</a></strong>Very good explanation of how to choose the next feature to split on based on information gain<br>
-                    <!-- Just a good outline plus a plot of the decision regions <strong><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_iris.html#sphx-glr-auto-examples-ensemble-plot-forest-iris-py">Plot the decision surfaces of ensembles of trees on the iris dataset¶</a> -->
+                    <!-- Just a good outline plus a plot of the decision regions--> <strong><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_iris.html#sphx-glr-auto-examples-ensemble-plot-forest-iris-py">Plot the decision surfaces of ensembles of trees on the iris dataset¶</a>
                     
-<!--                    <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition- follows 09_tabular.ipynb in <a href="https://github.com/fastai/fastbook">this excellent online book</a>.
+                    <br><strong style="color: #008800" >Homework : bluebook-for-bulldozers Kaggle Competition- follows 09_tabular.ipynb in <a href="https://github.com/fastai/fastbook">this excellent online book</a>.
                         <ol>
                             <li>Read this <a href="https://www.kaggle.com/code/alexisbcook/getting-started-with-kaggle-competitions">Getting Started with Kaggle Competitions</a></li>
                             <li>Sign up for a <a href="https://www.kaggle.com/">Kaggle</a> account</li>
@@ -425,7 +427,7 @@
 
             </td>
         </tr>
-        <tr>
+<!--        <tr>
             <td class="style_white "><em>9,10</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR> 
