@@ -440,10 +440,8 @@
  
                 <strong><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_ensemble_oob.html?highlight=randomforestclassifier">Out of Bag error </a></strong>Using rows that were not used to train each tree in a random forest to calculate that trees error, and then averaging these errors.<br>
 
-                <strong><a href="https://youtu.be/fDQkUN9yw44"> Bias, Variance</a></strong>How to see if your model overfits or underfits or is just right<br>
-                <!--get the bias variance targets, then graph then cross validation to tune hyperparameters (for RF), then train on full dataset (minus holdout) then the error-->
-                <!-- just the first graph showing training error and validation error  <strong><a href="https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9">The Bias-Variance Tradeoff</a><br> -->
-               <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.
+             <!--get the bias variance targets, then graph then cross validation to tune hyperparameters (for RF), then train on full dataset (minus holdout) then the error-->
+                <strong><a href="https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/">Random forest hyperparameters</a></strong>What do they mean?  How to set.
                 A Random forest will not overfit by adding more trees, it will overfit based on other hyperparameters though. How to choose correct values for hyperparameters?  <br>
                 <strong><a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn cross validation</a></strong>A detailed explanation.  Pay attention to stratified cross validation, a way to use cross validation on imbalanced datasets<br>
                 <br>
@@ -480,12 +478,11 @@
 
             </td>
         </tr> 
-<!--        <tr>
+        <tr>
             <td class="style_white "><em>11,12</em></td>
             <td class="style_white ">
-                <!-- <strong style="color: #cc0000">Test, 4/13/22.  Includes everything since 2/21/22 (week 7).Will be hosted on gitlab and/or given on paper<br></strong> -->
-
-<!--                <strong>Lectures</strong><BR>    
+                
+                <strong>Lectures</strong><BR>    
                     <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always). Other measures that do a better job of evaluating model performence <br>
                 <br>
                     <strong><mark>Explainable AI - maybe the most interesting part of this class</mark><br>
@@ -499,10 +496,10 @@
                         <tr><td>Feature Importance</td><td>Random Forest</td><td>Fast</td><td>Overvalues high cardinality columns. Prefer Permutation importance.</td></tr>
                         <tr><td>Permutation Importance</td><td>All models</td><td>Slow</td><td>Scrambles data in each column, measure performence drop, Rank features by drop.</td></tr>
                     </table><br>
-                    <!-- -Random Forest built in Feature Importance method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
+                     -Random Forest built in Feature Importance method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
                     Permutation Importance.  Works for any model.  Scramble the data in one column and then measures how model performence drops, if you do this for all columns then you have a notion of a features importence from the models perspective. Use these importances to rank features.  Leads to interesting conclusions. 
                     For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>-->
-<!--                    <strong>Algorithms that show prediction changes as feature(s) are permuted.<br>
+                    <strong>Algorithms that show prediction changes as feature(s) are permuted.<br>
                     </strong> Lets you ask questions of a model (see'PDP and ICE plots' notebook to the right ). 2 algorithms to consider<br>
                     
                     ICE plots : measures the effect on target prediction when permuting column(s) on 1 row.<br>
@@ -533,7 +530,7 @@
                 <!-- Should I do confidence intervals? <strong><a href="http://contrib.scikit-learn.org/forest-confidence-interval">Confidence Intervals for Scikit Learn Random Forests</a><br>
                 <strong><a href="https://www.mathsisfun.com/data/confidence-interval.html">Confidence Intervals</a>In case you forgot<br> -->
 
-<!--                    <br><strong>References: Explainable AI</strong><BR>
+                    <br><strong>References: Explainable AI</strong><BR>
 
                     <strong><a href="https://scikit-learn.org/stable/modules/partial_dependence.html"> Partial Dependence and Individual Conditional Expectation plots</a></strong><br>
                     <strong><a href="https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py">Partial Dependence and Individual Conditional Expectation Plots-Code</a></strong><br>
@@ -542,12 +539,12 @@
                     <strong><a href=" https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html"> Permutation Importance with Multicollinear or Correlated Features</a></strong><br>
                     <strong><a href=" https://scikit-learn.org/stable/auto_examples/feature_selection/plot_select_from_model_diabetes.html#feature-importance-from-coefficients">Model-based and sequential feature selection</a></strong>Built in methods to prune features from dataset.  Careful with these methods, consider instead pruning features that have a 0 or negative permutation importance. see <a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_11/11_1_BreastCancer_Classification_questions.ipynb">Breast cancer classifier</a> notebook to the right for examples of Sequential and RCEFV algorithms<br>
                     <br>
-                    <strong style="color: #cc0000">Test, 4/14/23.  Includes everything between Test 1 and this note( weeks 7-11 above). <br>
+                    <strong style="color: #cc0000">Test, 4/15/24.  Includes everything between Test 1 and this note( weeks 7-11 above). <br>
                         1. How to transform features in a dataset into numerical values<br>      
                         2. How to recognize correlated features, when to remove them.<br>
                         3. How to split a dataset<br>
                         <!-- 4. How to calculate Gini impurity on a small dataset( see Supervised- Decision Trees Lecture)<br> -->
-<!--                        5. What is cross validation, how to implement it, what does it do, what are it's drawbacks.<br>
+                       5. What is cross validation, how to implement it, what does it do, what are it's drawbacks.<br>
                         6. Why and how should you use a framework like Optuna.<br>
                         7. Accuracy is a good measure for balanced datasets only.<br>
                         8. Given a particular dataset, what will your model likely be best at predicting? What will it be worst at predicting?<br>
@@ -574,9 +571,9 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_1_accuracy_precision_recall_f1_confusion.ipynb">Precision/Recall, F1 Score, Confusion Matrix</a></strong> Goes with lecture to the left<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/creditcard_small.csv">Small subset of Kaggle's credit card fraud dataset</a></strong> Goes with above notebook <br>
                 <br>
-                <!--Partial Dependence and Individual Conditional Expectation Plots https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py
+                <!--EXAMPLES-Partial Dependence and Individual Conditional Expectation Plots https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py
                     https://scikit-learn.org/stable/modules/partial_dependence.html -->
-<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb">Permutation importance (and RandomForestClassifier's built in feature importance)</a></strong>How to tell what the model thinks is imortant<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb">Permutation importance (and RandomForestClassifier's built in feature importance)</a></strong>How to tell what the model thinks is imortant<br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_3_PDP_plots_ICE.ipynb">PDP and ICE plots</a></strong><br>
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/datasets/melb_data_cleaned.feather">Cleaned version of Melbourne housing dataset</a></strong> Goes with above notebook<br>
                 <br>
@@ -590,7 +587,7 @@
                 
             </td>
         </tr>
-        <tr>
+ <!--       <tr>
             <td class="style_white "><em>12,13</em></td>
             <td class="style_white ">
                 
