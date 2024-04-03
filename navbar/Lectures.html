@@ -483,7 +483,9 @@
                 
                 <strong>Lectures</strong><BR>    
                     <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week10/10_Precision_Recall_F1_Confusion_matrix.pdf">Precision/Recall, F1 Score, Confusion Matrix</a></strong>Why accuracy is a bad metric for unbalanced datasets (spoiler: model can just predict majority class always). Other measures that do a better job of evaluating model performence <br>
-                <br>
+               
+                    <!-- show the cat, fish, hen example and then illustrate swapped axis (relative to scikitlearn) on confusion matrix https://webcache.googleusercontent.com/search?q=cache:https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2&strip=0&vwsrc=1&referer=medium-parser -->
+                    <br>
                     <strong><mark>Explainable AI - maybe the most interesting part of this class</mark><br>
                     Caveats: </strong><br>
                     1.The model has learned something from the data. <br>
@@ -497,8 +499,8 @@
                     </table><br>
                      -Random Forest built in Feature Importance method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
                     Permutation Importance.  Works for any model.  Scramble the data in one column and then measures how model performence drops, if you do this for all columns then you have a notion of a features importence from the models perspective. Use these importances to rank features.  Leads to interesting conclusions. 
-                    For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>-->
-                    <strong>Algorithms that show prediction changes as feature(s) are permuted.<br>
+                    For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>
+                    <br><strong>Algorithms that show prediction changes as feature(s) are permuted.<br>
                     </strong> Lets you ask questions of a model (see'PDP and ICE plots' notebook to the right ). 2 algorithms to consider<br>
                     
                     ICE plots : measures the effect on target prediction when permuting column(s) on 1 row.<br>
@@ -544,6 +546,7 @@
                     <strong><a href="https://blog.datadive.net/interpreting-random-forests/">Treeinterpreter for Random Forest</a></strong><br>
                     <strong><a href="https://arxiv.org/pdf/2010.06734.pdf">SHAP verse Treeinterpreter</a></strong><mark> found that SHAP took 60x longer than treeinterpreter to complete.</mark>  Concluded that treeinterpreter provided high quality results at a lower
                         computational footprint.<br>
+                        <strong><a href="https://github.com/shap/shap">SHAP github repo</a></strong>Has a good readme<br>
                     <strong><a href="https://www.kaggle.com/code/dansbecker/shap-values">SHAP values</a></strong>  SHAP Values (an acronym from SHapley Additive exPlanations) break down a prediction to show the impact of each feature for one row of data. Indicates why a model made a decision given a particular set of inputs.<br>         
                     <strong><a href="https://github.com/slundberg/shap">SHAP github repo</a></strong>  <br>         
                     <br><strong>References: Gradient Boosted Trees</strong><BR>
@@ -586,7 +589,7 @@
                 
             </td>
         </tr>
- <!--       <tr>
+        <tr>
             <td class="style_white "><em>12,13</em></td>
             <td class="style_white ">
                 
@@ -614,12 +617,12 @@
 
 
 
- <!--               <br><strong>References</strong><BR>
+               <br><strong>References</strong><BR>
                 <strong><a href="https://www.youtube.com/watch?v=2AQKmw14mHM">Statquest: R-squared, Clearly Explained!!!</a></strong> This is the default measure used for sklearn random forest regressor, lightGBM boosted tree regressor, and catboost boosted tree regressor<br>
                 <strong><a href="https://www.kaggle.com/learn/time-series">Kaggle: Time Series short course</a></strong> A good introduction to forcasting with time series data<br>
-                <!-- <a href="https://www.kaggle.com/code/bextuychiev/every-pandas-function-to-manipulate-time-series/notebook">Every Pandas Function to Manipulate Time Series</a> -->
+                <a href="https://www.kaggle.com/code/bextuychiev/every-pandas-function-to-manipulate-time-series/notebook">Every Pandas Function to Manipulate Time Series</a>
     
-<!--                <br><strong>Homework</strong><BR>                 
+<!--                <br><strong>Homework</strong><BR>   -->              
             </td>
             <td class="style_white ">
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_12/12_1_boostedtrees.ipynb">Boosted Trees</a></strong>Compares Random Forest, LightGBM and Catboost for both regression and classification tasks.  Catboost is the winner in terms of speed and overall accuracy (at least for these datasets and these tasks), see documentation in first cell for further comparisons.<br>
@@ -635,7 +638,7 @@
                 
             </td>
         </tr>
-        
+ <!--       
         <tr>
             <td class="style_white "><em>14</em></td>
             <td class="style_white ">
@@ -650,8 +653,7 @@
                         Partial Autocorrelation also conveys similar information but it conveys the pure correlation of a series and its lag, excluding the correlation contributions from the intermediate lags. -->
 <!--                        <strong><a href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></strong><br>
  
-                        <!-- <strong ><a href="https://github.com/CNUClasses/DATA301/blob/master/content/tests/test2_solution.pdf" style="color: #cc0000">Test 2 SOLUTION</a></strong> <br>  -->
-                    <!-- <strong ><a href="https://towardsdatascience.com/5-ways-to-detect-outliers-that-every-data-scientist-should-know-python-code-70a54335a623">5 Ways to Detect Outliers/Anomalies That Every Data Scientist Should Know (Python Code)</a><br>
+                     <!-- <strong ><a href="https://towardsdatascience.com/5-ways-to-detect-outliers-that-every-data-scientist-should-know-python-code-70a54335a623">5 Ways to Detect Outliers/Anomalies That Every Data Scientist Should Know (Python Code)</a><br>
                     <strong ><a href="https://www.analyticsvidhya.com/blog/2021/07/anomaly-detection-using-isolation-forest-a-complete-guide/#:~:text=In%20an%20Isolation%20Forest%2C%20randomly,more%20cuts%20to%20isolate%20them.https://www.analyticsvidhya.com/blog/2021/07/anomaly-detection-using-isolation-forest-a-complete-guide/#:~:text=In%20an%20Isolation%20Forest%2C%20randomly,more%20cuts%20to%20isolate%20them.">Anomaly detection using Isolation Forest – A Complete Guide</a><br>
                     <strong ><a href="https://www.linkedin.com/pulse/how-use-machine-learning-anomaly-detection-condition-flovik-phd/">How to use machine learning for anomaly detection and condition monitoring</a> Light on code but does a good job of outlining how anomalous behaviour can be used as an early warning to machinery failure</strong><br><br> -->
 
