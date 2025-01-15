@@ -1,22 +1,16 @@
-if you have krassowski/jupyterlab-Isp widget installed
-Hover over any piece of code; if an underline appears, you can press 
-Ctrl to get a tooltip 
-ctrl-b go to definition
-Alt+ o go back
+Jupyter Shortcut Commands
+The following shortcuts work when in COMMAND mode. To enter the COMMAND mode press ESC or click anywhere outside the cell
 
-cmd shift-L  #toggle line numbers, useful to pinpoint where error occurred
-
-cmd-y #change cell to code
+shift-enter #run cell
 cmd-m #change cell to markdown
-
-cmd-o       #hide output, edit Settings->Advanced Settings->Keyboard Shortcuts- add O and shift-O to User Preferences
-cmd-shift o # see https://www.py4u.net/discuss/140128 Answer 4
-
-Shift + Up Arrow select the current cell and the cell above
-Shift + Down Arrow select the current cell and the cell below
-Shift + m merge selected cells
-
-ctrl-enter #run cell
+cmd-y #change cell to code
 cmd-a #add cell before
 cmd-b #add cell after
 cmd d,d #delete cell
+cmd x #cut cell
+cmd v #paste cell
+cmd-o #hide output, if needed, edit Settings->Advanced Settings->Keyboard Shortcuts- add O and shift-O to User Preferences
+cmd shift-L #toggle line numbers, useful to pinpoint where error occurred
+Shift + Up Arrow select the current cell and the cell above
+Shift + Down Arrow select the current cell and the cell below
+Shift + m merge selected cells
