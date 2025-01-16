@@ -24,6 +24,7 @@
                             <li>'Machine Learning with Python Cookbook' by Chris Albon - short data/ml recipes</li>
                             <li>'Python Machine Learning' by Sebastian Raschka - Excellent machine learning introduction</li>
                             <li><a href='https://blog.dailydoseofds.com/'>Daily Dose of Data Science</a>An approachable blog with lots of relevant content</li>
+                            <li><a href='https://dataelixir.com/'>Data Elixir</a>An approachable newsletter with lots of relevant content</li>
                         </ul>
                     </li>
                   </ul>
@@ -104,7 +105,7 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_1/1_JupyterUsage.ipynb">How to efficiently navigate a Jupyter Notebook</a></strong> Some keyboard shortcuts, "Magic" commands, how to run shell commands, getting API help, and an introduction to debugging in a Jupyter Notebook<br>
             </td>
         </tr>
-<!--     <tr>
+     <tr>
 
         <td class="style_white "><em>2</em></td>
         <td class="style_white ">
@@ -128,19 +129,19 @@
                  your standing at Vernal falls in Yosemete and you want to take a picture with no one in it.  It's crowded - how do you do it?
                 -->
                 <br>
-<!--            <strong>References</strong><BR>
+            <strong>References</strong><BR>
                 
             <a href="https://www.kaggle.com/alexisbcook/inconsistent-data-entry"> Kaggle- text pre processing</a>Very good, especially the fuzzywuzzy module<br>              
             <a href="https://www.kaggle.com/sudalairajkumar/getting-started-with-text-preprocessing">Text pre-processing</a> Good, although some of it (spell checking for instance) may not scale well<br>
             <a href=" https://realpython.com/inner-functions-what-are-they-good-for/#retaining-state-with-inner-functions-closures "> Real Python- Closures</a>  Closures are functions that have state, they are a good way to 
-            genericize a function that you are applying to a DataFrame column in pandas.  See the 'Cleaning Strings' notebook below for an example.<br>
+            genericize a function that you are applying to a DataFrame column in pandas.  See the 'Cleaning Strings' notebook for an example.<br>
             <a href=" https://realpython.com/regex-python-part-2/#substitution-functions"> Real Python- Regular Expressions - re.sub</a><br> 
             <a href=" https://www.computerhope.com/unix/regex-quickref.htm">More regular expressions</a><br>
             <a href=" https://regexone.com/lesson/optional_characters?">Regular expressions exercises</a><br>
            <!-- <a href=" https://realpython.com/regex-python/ "> Regular Expressions- part 1</a><br> -->
              <!-- <a href=" https://realpython.com/regex-python-part-2/ "> Regular Expressions- part 2</a><br> -->
                              
-<!--        </td>
+        </td>
         <td class="style_white ">
           
             <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_2/22_review_chapter_5.ipynb">Pandas Intro</a></strong> Chapter 5, McKinney<br>
@@ -152,7 +153,7 @@
 
         </td>
     </tr>
-<tr>
+<!--<tr>
         <td class="style_white "><em>3</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>
@@ -193,7 +194,10 @@
     <!--NOTE the above 2 may be confusing, tell them Regression, Neural Nets, kNN do better with scaling, Decision Trees, Random Forest, Gradient boosted trees do not improve-->
 <!--                    <br>
                     Feature reduction techniques:PCA is linear and deterministic, UMAP is not, different runs with the same hyperparameters can yield different results.  PCA converges faster than UMAP<br>
-                    <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), A Step-by-Step introduction</a></strong><br>
+                    <!-- INCLUDE? https://github.com/YingfanWang/PaCMAP  PaCMAP (Pairwise Controlled Manifold Approximation) is a dimensionality reduction method that can be used for visualization, preserving both local and global structure of the data in original space. PaCMAP optimizes the low dimensional embedding using three kinds of pairs of points: neighbor pairs (pair_neighbors), mid-near pair (pair_MN), and further pairs (pair_FP).
+
+Previous dimensionality reduction techniques focus on either local structure (e.g. t-SNE, LargeVis and UMAP) or global structure (e.g. TriMAP), but not both, although with carefully tuning the parameter in their algorithms that controls the balance between global and local structure, which mainly adjusts the number of considered neighbors. Instead of considering more neighbors to attract for preserving global structure, PaCMAP dynamically uses a special group of pairs -- mid-near pairs, to first capture global structure and then refine local structure, which both preserve global and local structure.-->
+<!--                    <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), A Step-by-Step introduction</a></strong><br>
                     <strong><a href="https://pair-code.github.io/understanding-umap">Understanding UMAP</a></strong>UMAP is a non-linear dimensionality reduction technique.  It is useful when you have non-linear relationships between features.  It is also useful when you have a large number of features.  It is not useful when you have a small number of samples.<br>
                     <strong><a href="https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29">Dimensionality Reduction for Data Visualization: PCA vs TSNE vs UMAP vs LDA</a></strong>You can vie the archival version of this article <a href="https://archive.ph/2YdOX#selection-285.0-285.75">here</a>. BTW, to access pre-paywall medium articles, install the 'Medium parser' browser extension<br><br>
                     <strong><a href="https://www.pinecone.io/learn/dimensionality-reduction/">Straightforward Guide to Dimensionality Reduction</a>PCA, t-SNE and UMAP explanations with a bonus figure that intuitively covers the curse of dimensionality</strong>
