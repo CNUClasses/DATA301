@@ -222,18 +222,7 @@
        
             </td>
             <td class="style_white ">
-                <strong><a href="https://github.com/CNUClasses/utils.git" style="color: #00cc00">the utils package</a></strong>A collection of reusable utilities that come in handy for many notebooks. See README.md for more information<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb" style="color: #00cc00"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
-<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Scaling Numerical Data</a></strong> After all categorical variables have been converted to numerical data, scale them with these transforms. (Note: this is required in order to use this data as input to many ML algorithms)<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature reduction</a></strong>Removing highly correlated features <strong>and</strong> using PCA for feature reduction--
-                See Albon, recipes 9.1 and 10.3 for PCA and Removing highly correlated features.  Do these 2 steps <strong>after</strong> categorical data has been converted to numerical data<br><br>
-                    
-                <b>Pipelines</b><br>Pipelines are a way to iteratively apply a list of functions to a dataframe. Once written a pipeline defines the order that data cleaning steps are applied.  Pipelines streamline pre-processing and gurantee consistant and repeatable results<br>
-                The following notebooks demonstrate pipelines.  The first is used to debug the pipeline functions in the notebook itself. The second shows significant code reduction after the debugged functions have been ported to the utils package.  The functions are now available for use in other notebooks and scripts.<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline</a></strong> Use this notebook to debug functions in the notebook itself, after functions debugged, port them to utils package<br>          
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_after_moving_functions_into_utils.ipynb">A data pre-processing Pipeline</a></strong>Imports functions from utils package.<br>
-                <br>Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
+                Jupyter notebooks are for rapid prototyping. They make it easy to load data once, and then iteratively and quickly run and document experiments. 
                 They are not meant for production environments since they tend to display lots of UI and require intervention to run each cell.  
                 If your notebook is purely exploratory, that is it only plots various aspects of data, then you need do nothing else. 
                 If however, your notebook produces something (like a processed dataset), then it's a good idea to port it's relevant content to a script that requires no user interaction, and displays no UI. This approach has the following advantages:<br>
@@ -248,7 +237,19 @@
                 <li>Create a guarded section in the python file that runs only if it is executed as a script, not when it's imported as a module.  It will start with 'if __name__== "__main__":'</li>
                 <li>Place all code that should run in this guarded section.</li>
                 </ol>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline'.  Imports functions from utils. <br>
+
+                <strong><a href="https://github.com/CNUClasses/utils.git" style="color: #00cc00">the utils package</a></strong>A collection of reusable utilities that come in handy for many notebooks. See README.md for more information<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/41_loading_util_package_from another_folder.ipynb" style="color: #00cc00"> Using the new utils package</a></strong>How to add the proper path to the package, how to browse the package contents<br>
+<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/42_Processing_Numerical_data.ipynb"> Scaling Numerical Data</a></strong> After all categorical variables have been converted to numerical data, scale them with these transforms. (Note: this is required in order to use this data as input to many ML algorithms)<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/45_dimenionality_reduction.ipynb">Feature reduction</a></strong>Removing highly correlated features <strong>and</strong> using PCA for feature reduction--
+                See Albon, recipes 9.1 and 10.3 for PCA and Removing highly correlated features.  Do these 2 steps <strong>after</strong> categorical data has been converted to numerical data<br><br>
+                    
+                <b>Pipelines</b><br>Pipelines are a way to iteratively apply a list of functions to a dataframe. Once written a pipeline defines the order that data cleaning steps are applied.  Pipelines streamline pre-processing and gurantee consistant and repeatable results<br>
+                The following notebooks demonstrate pipelines.  The first is used to debug the pipeline functions in the notebook itself. The second shows significant code reduction after the debugged functions have been ported to the utils package.  The functions are now available for use in other notebooks and scripts.<br>
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline</a></strong> Use this notebook to debug functions in the notebook itself, after functions debugged, port them to utils package<br>          
+                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_after_moving_functions_into_utils.ipynb">A data pre-processing Pipeline</a></strong>Imports functions from utils package.<br>
+                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline'.  Imports functions from utils. <br>
      
 
             </td>
