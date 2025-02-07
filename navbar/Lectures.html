@@ -206,7 +206,9 @@
                     <!-- https://www.youtube.com/watch?v=oRvgq966yZg -- if fewer samples than variables then the number of samples puts an upper bound on the number of PCs -->
                     <strong><a href="https://towardsai.net/p/data-science/how-when-and-why-should-you-normalize-standardize-rescale-your-data-3f083def38ff"> Scaling data</a>
                     <!-- excellent tutorial  https://www.kaggle.com/alexisbcook/pipelines -->
-                    <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pipelines- a way to iteratively apply a list of functions to a dataframe</a></strong>An excellent way to simplify and streamline data pre processing.<br>
+
+                    Pandas pipe takes functions as inputs. These functions need to take a dataframe as input and return a dataframe.<br> 
+                    <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pandas Pipelines a way to iteratively apply a list of functions to a dataframe to ensure consistant data pre-processing</a></strong>uses pandas pipe- pipe takes a function as input. This functions must take a dataframe as input and return a dataframe<br>
                         
                     <strong><a href="https://seaborn.pydata.org/tutorial/introduction">Optional: An introduction to seaborn</a></strong>Seaborn is a high level API that uses matplotlib to generate many kinds of plots. It lets you plot common things (scatter, line, box, histogram) easily with 
                         few lines of code. I use it for many things because there is less interaction with matplotlib's fiddley bits.<br>
@@ -250,22 +252,23 @@
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_before_migrate_functions_to_package.ipynb"> A data pre-processing Pipeline</a></strong> Use this notebook to debug functions in the notebook itself, after functions debugged, port them to utils package<br>          
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/43_pipeline_complete_preprocess_after_moving_functions_into_utils.ipynb">A data pre-processing Pipeline</a></strong>Imports functions from utils package.<br>
                  <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/preprocess_demo.py">A data pre-processing Pipeline script</a></strong>The converted script version of the above notebook, 'A data pre-processing Pipeline'.  Imports functions from utils. <br>
-     
+                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
+    
 
             </td>
         </tr>
-<!--        <tr>
+        <tr>
             <td class="style_white "><em>5</em></td>
             <!-- sample your dataset if it's huge to make it faster to iterate over development-->
                  
-<!--            <td class="style_white ">
+            <td class="style_white ">
                 <strong>Lectures</strong><BR>
                     <!--UMAP for clustering?-->
                     <!--excellent clustering and LLM example https://github.com/CNUClasses/Clustering-with-LLM.git, see article https://towardsdatascience.com/mastering-customer-segmentation-with-llm-3d9008235f41-->
                     <!-- https://www.statology.org/cluster-analysis-real-life-examples/ 
                     https://stats.stackexchange.com/questions/133656/how-to-understand-the-drawbacks-of-k-means/133694#133694-->
                
-<!--                    <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
+                    <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
             
                      <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is. Includes most clustering algorithms (KMeans, DBScan etc.) but not kNN</mark></B><br>
@@ -287,13 +290,13 @@
                         
                     <strong><a href="https://github.com/christopherjenness/DBCV"> Python implementation of Density-Based Clustering Validation</a></strong> A strategy that evaluates cluster choices based on density, usually a better choice than silhouette score for non-globular clusters<br>
           
-                    <!-- FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
+                    <!-- 404 error now-FANTASTIC Gotchas with clustering - see the curse of dimensionality expla https://delta1epsilon.github.io/2019/Gotchas-with-clustering/ -->
                     <!-- kmeans and heiarchical intro-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=blog&utm_medium=beginners-guide-hierarchical-clustering -->
-<!--                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
+                    <strong><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">StatQuest: K-means clustering</a></strong> Scales well (O(n)), uses distance between points. Tends to produce spherical clusters.  But you need to specify number of clusters to find up front and does not handle elongated data well.<br>
                     <!-- tuning DBSCAN and HDBSCAN and OPTICS http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/ -->
-<!--                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
+                    <strong><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">StatQuest: DBSCAN</a></strong> Density based clustering.  Scales well (O(n)), uses distance between <u>nearest</u> points. Can handle non-spherical as well as nested clusters.  Can also be used to identify outliers<br>
                     <!-- <strong><a href="https://www.youtube.com/watch?v=7xHsRkOdVwo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=37">StatQuest: Heiarchical Clustering</a>  If I cover it<br> -->
-<!--                    <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
+                    <strong><a href="https://www.statology.org/cluster-analysis-real-life-examples/"> 5 Examples of Cluster Analysis in Real Life</a></strong> It is also be used to generate new features (cluster membership) in a dataset.  This enhanced dataset may be easier to interpret by subsequent ML algorithms.<br>
                     <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"> scikit-learn KMeans</a></strong> 
                     Sample code and methods, pay attention to fit, predict (for new data), inertia_ (quality measure, sum of squared distances of samples to closest cluster center). <br>
                     <B><mark>Prefer using the KMeans++ method to initialize cluster centers to the K points furthest from one another</mark><B></B><br>
@@ -305,22 +308,20 @@
                 <br><br><strong>Homework</strong><BR>
                  See if you can use numpy to vectorize the function get_distances(dims): in 51_curse_of_dimensionality.ipynb <br> -->
 
-<!--            </td>
+            </td>
             <td class="style_white ">
-                <!-- https://www.kaggle.com/code/vahidehdashti/simple-uber-eda-cab-ride-price-prediction/notebook  has 2 uber dataset with source and dest, and weather dataset. Use merges to record weather at source and destination -->
-<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_4/44_pandas_merges.ipynb">Pandas merges</a></strong>A segue: In case you are struggling with merging the salary dataset and your currency dataset, here is an overview of the different merges available<br><br>
-
-                           <!-- see projects/proj2 folder <strong><a href="">Something Different: What can we figure out about people without doing much of anything to the data</a></strong>Uses a larger version of the marketing dataset you are working on for project 2<br> -->
+ 
+<!--!!!!!!!!!!!! see DATA301_CODE/projects/proj2 folder <strong><a href="dGBLS.ipynb">Something Different: What can we figure out about people without doing much of anything to the data</a></strong>Uses a larger version of the marketing dataset you are working on for project 2<br> -->
                 
                 
 
     <!-- Maybe a little esoteric?                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/51_curse_of_dimensionality.ipynb">The curse of dimensionality</a></strong> Shows how data that is tightly clustered in low dimensions becomes sparse as dimensionality increases. 
                   This phenomena makes it harder to train ML models, and is why dimensionality reduction is so important.<br> Also has some interesting interactive plots. -->
-<!--               <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
+               <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_5/52_kmeans.ipynb">K-means clustering</a></strong>Sample implementation illustrating the K-means algorithm.  Also includes sklearns kmeans sample code.<br><br>
              
             </td>
         </tr>
-       <tr>
+<!--       <tr>
             <td class="style_white "><em>6</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>  
