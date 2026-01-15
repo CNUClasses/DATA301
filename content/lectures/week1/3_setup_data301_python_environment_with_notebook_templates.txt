@@ -25,15 +25,4 @@ conda deactivate
 conda activate data301
 
 #---------------- Jupyter Lab Templates ---------------------------------
-#optional for all OS's
-#if you want to use templates for your notebooks, then run these at a command line in the data301 virtual environment
-conda install nodejs -c conda-forge --repodata-fn=repodata.json  #this is for the templates that I will use
-pip install jupyterlab_templates             #these are the templates
-jupyter labextension install jupyterlab_templates
-jupyter serverextension enable --py jupyterlab_templates
-
-#where are the jupyter templates in data301? Find and edit them so they do what you want.  
-# type this at command line to find on linux or Mac
-#find ~ -type d -name "jupyterlab_templates"
-#On my machine they are located at
-#/home/keith/anaconda3/envs/data301/lib/python3.9/site-packages/jupyterlab_templates/templates/jupyterlab_templates
+#removed-obsolete
