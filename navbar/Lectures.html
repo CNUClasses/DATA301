@@ -199,7 +199,7 @@
 
 
                     <strong><a href="https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py">Importance of Feature Scaling</a></strong><br>
-                  <strong>See 'Feature Scaling is Not Always Necessary' in <a href="https://join.dailydoseofds.com/">Daily Dose of Data Science Full Archive</a></strong><br>
+                  <!-- <strong>See 'Feature Scaling is Not Always Necessary' in <a href="https://join.dailydoseofds.com/">Daily Dose of Data Science Full Archive</a></strong><br> -->
     <!--NOTE the above 2 may be confusing, tell them Regression, Neural Nets, kNN do better with scaling, Decision Trees, Random Forest, Gradient boosted trees do not improve-->
                     <br>
                     Feature reduction techniques:PCA is linear and deterministic, UMAP is not, different runs with the same hyperparameters can yield different results.  PCA converges faster than UMAP<br>
@@ -207,12 +207,12 @@
                     Previous dimensionality reduction techniques focus on either local structure (e.g. t-SNE, LargeVis and UMAP) or global structure (e.g. TriMAP), but not both, although with carefully tuning the parameter in their algorithms that controls the balance between global and local structure, which mainly adjusts the number of considered neighbors. Instead of considering more neighbors to attract for preserving global structure, PaCMAP dynamically uses a special group of pairs -- mid-near pairs, to first capture global structure and then refine local structure, which both preserve global and local structure.-->
                     <strong><a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">StatQuest: Principal Component Analysis (PCA), A Step-by-Step introduction</a></strong><br>
                     <strong><a href="https://pair-code.github.io/understanding-umap">Understanding UMAP</a></strong>UMAP is a non-linear dimensionality reduction technique.  It is useful when you have non-linear relationships between features.  It is also useful when you have a large number of features.  It is not useful when you have a small number of samples.<br>
-                    <strong><a href="https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29">Dimensionality Reduction for Data Visualization: PCA vs TSNE vs UMAP vs LDA</a></strong>You can view the archival version of this article <a href="https://archive.ph/2YdOX#selection-285.0-285.75">here</a>. BTW, to access pre-paywall medium articles, install the 'Medium parser' browser extension<br><br>
-                    <strong><a href="https://www.pinecone.io/learn/dimensionality-reduction/">Straightforward Guide to Dimensionality Reduction</a>PCA, t-SNE and UMAP explanations with a bonus figure that intuitively covers the curse of dimensionality</strong>
+                   <!-- Good but behind paywall <strong><a href="https://archive.ph/2YdOX#selection-285.0-285.75">Dimensionality Reduction for Data Visualization: PCA vs TSNE vs UMAP vs LDA</a></strong><br><br> -->
+                    <strong><a href="https://www.pinecone.io/learn/dimensionality-reduction/">Straightforward Guide to Dimensionality Reduction</a></strong>PCA, t-SNE and UMAP explanations with a bonus figure that intuitively covers the curse of dimensionality<br>
                     <strong><a href="https://projector.tensorflow.org/">Embeddings Projector</a></strong> A tool to visualize high dimensional.  It reduces data to 2 or 3 dimensions then projects it. It is useful for interactively visualizing the output of PCA, t-SNE, and UMAP.  It will also give you a feeling for the speed of these algorithms<BR>
                     <BR>
                     <!-- https://www.youtube.com/watch?v=oRvgq966yZg -- if fewer samples than variables then the number of samples puts an upper bound on the number of PCs -->
-                    <strong><a href="https://towardsai.net/p/data-science/how-when-and-why-should-you-normalize-standardize-rescale-your-data-3f083def38ff"> Scaling data</a>
+                    <!-- <strong><a href="https://towardsai.net/p/data-science/how-when-and-why-should-you-normalize-standardize-rescale-your-data-3f083def38ff"> Scaling data</a><br><br></strong> -->
                     <!-- excellent tutorial  https://www.kaggle.com/alexisbcook/pipelines -->
                     Pandas pipe takes functions as inputs. These functions need to take a dataframe as input and return a dataframe.<br> 
                     <strong><a href="https://www.kdnuggets.com/2021/01/cleaner-data-analysis-pandas-pipes.html">Pandas Pipelines a way to iteratively apply a list of functions to a dataframe to ensure consistant data pre-processing</a></strong>uses pandas pipe- pipe takes a function as input. This functions must take a dataframe as input and return a dataframe<br>
