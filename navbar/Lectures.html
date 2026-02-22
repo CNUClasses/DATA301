@@ -282,7 +282,7 @@
                     <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week5/51_ML_types_clustering_introduction.pdf">Machine Learning Introduction</a></strong>
                      with an emphasis on introducing unsupervised, clustering techniques<br>
             
-                     <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is. Includes most clustering algorithms (KMeans, DBScan etc.) but not kNN</mark></B><br>
+                     <br><B><mark>Unsupervised Learning - Use when you do not know what the right answer is (dataset DOES NOT have a dependant variable). Includes most clustering algorithms (KMeans, DBScan etc.) but not kNN</mark></B><br>
                      <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week5/kmeans_in_class_notes_for_board.pdf">BOARDWORK NOTES:kmeans clustering, elbow method, silhouette score</a></strong><br>
                      <ul><strong>Kmeans considerations</strong>
                         <li>Is fast, O(n)</li>
@@ -387,7 +387,7 @@
                     
                     <strong><a href="https://hdbscan.readthedocs.io/en/latest/performance_and_scalability.html">Benchmarking Performance and Scaling of Python Clustering Algorithms</a></strong>TLDR-Prefer HDBSCAN. HDBSCAN, DBSCAN and K-means are the only algorithms that converge in a reasonable amount of time on large datasets. K-means is fastest but it's performance is poor. Article examines 11 algorithms. 
                     The plot labeled 'Performance Comparison of Clustering Implementations' illustrates how these algorithms perform against each other.<br> 
-                    <mark><strong><a href="https://www.dailydoseofds.com/dbscan-the-faster-and-scalable-alternative-to-dbscan-clustering/">DBSCAN++: The Faster and Scalable Alternative to DBSCAN Clustering (Warning: subscriber only article)</a></mark>
+                    <mark><strong><a href="https://www.dailydoseofds.com/dbscan-the-faster-and-scalable-alternative-to-dbscan-clustering/">DBSCAN++: The Faster and Scalable Alternative to DBSCAN Clustering (Warning: subscriber only article)</a></mark><br>
 
                     
                      <!-- /*https://www.scikit-yb.org/en/latest/api/model_selection/index.html yellowbrick visualizers, also feature importance -->
@@ -420,13 +420,13 @@
         </tr> 
 
 
- <!--        <tr>
+        <tr>
             <td class="style_white "><em>7</em></td>
             <td class="style_white ">
                 
                 <strong>Lectures</strong><BR> 
               
-                <br><B><mark>Supervised Learning - Use when you do know what the right answer is. </make> Algorithms include regressions, decision trees, random forest, all neural networks</B><br>
+                <B><mark>Supervised Learning - Use when you do know what the right answer is (dataset DOES have a dependant variable). </make> Algorithms include regressions, decision trees, random forest, all neural networks</B><br>
                  
                     <strong><a href="https://cnuclasses.github.io/DATA301/content/lectures/week7/71_supervised_split_dataset.pdf">Supervised - Train/Test splits</a></strong><br>
                     <!-- Do the math for linear regression on board -->
@@ -435,7 +435,7 @@
                     <strong style="color: #00cc00"><br>
                     Class canceled 3/28/25, instead watch the following video to get a feel for decision trees.<br> </strong>   
                     <strong><a href="https://www.youtube.com/watch?v=7VeUPuFGJHk">StatQuest: Decision Trees</a></strong>Very good explanation of how to choose the next feature to split on based on information gain<br></strong>
-
+                    -->
 
                <br><strong>References</strong><BR>
                 <strong>See 'How to actually use Train, Validation and Test Set' in <a href="https://join.dailydoseofds.com/">Daily Dose of Data Science Full Archive</a></strong>(sign up with email, get the pdf, look up topic)<br>
@@ -450,13 +450,19 @@
              </td>
             <td class="style_white ">
                 <!--71_  uses np.vectorize-->
-<!--                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb">Splitting a dataset</a></strong> <br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb">OLS Linear Regression</a></strong><br>
-                <br><strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb">Chained indexing and how to fix.</a></strong>Illustration of, and how to solve, the 'A value is trying to be set on a copy of a slice from a DataFrame' problem. <br>
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
+                <strong ><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/71_Supervised_splitting_dataset.ipynb.ipynb" target="_blank" >Splitting a dataset<br></strong><br><br>
+
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
+                <strong ><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_7/72_Linear_regression.ipynb.ipynb" target="_blank" >OLS Linear Regression<br></strong><br><br>
+
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
+                <strong ><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_6/63_chained_index_and_fix.ipynb.ipynb" target="_blank" >Chained Indexing and how to Fix<br></strong><br><br>
+
              
             </td>
         </tr> 
-       <tr>
+<!--       <tr>
             <td class="style_white "><em>8</em></td>
             <td class="style_white ">
                 <strong>Lectures</strong><BR>  
