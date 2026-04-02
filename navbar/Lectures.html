@@ -566,7 +566,7 @@
                     <br>
                     <strong><mark>Explainable AI - maybe the most interesting part of this class</mark><br>
                     Caveats: </strong><br>
-                    1.The model has learned something from the data. <br>
+                    1.The model has learned something from the data (ie good accuracy for regression or high F1 score for classification)<br>
                     2.Features are not correlated.</strong><br><br>
                     <strong>Algorithms that measure overall feature importance </strong><br> 
                     
@@ -575,8 +575,8 @@
                         <tr><td>Feature Importance</td><td>Random Forest</td><td>Fast</td><td>Overvalues high cardinality columns. Prefer Permutation importance.</td></tr>
                         <tr><td>Permutation Importance</td><td>All models</td><td>Slow</td><td>Scrambles data in each column, measure performence drop, Rank features by drop.</td></tr>
                     </table><br>
-                     -Random Forest built in Feature Importance method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional comutation overhead.<br>
-                    Permutation Importance.  Works for any model.  Scramble the data in one column and then measures how model performence drops, if you do this for all columns then you have a notion of a features importence from the models perspective. Use these importances to rank features.  Leads to interesting conclusions. 
+                     -Random Forest built in Feature Importance method. Works for Random Forest.  It's prone to overvalue high cardinality columns though. Very fast to compute. Prefer Permutation Importance if you can handle the additional computation overhead.<br>
+                    Permutation Importance.  Works for any model.  Scramble the data in one column and then measures how model performance drops, do this for all columns to get an idea of each columns importance from the models perspective. Use these importances to rank features; most important->highest performance drop.  Leads to interesting conclusions. 
                     For instance, in the voteranalysis project. If you calculate permutation importance for just 1 class of voters, you will see which issues (according to your model) were the most import to that class of voters for the 2016  election.<br>
                     <br><strong>Algorithms that show prediction changes as feature(s) are permuted.<br>
                     </strong> Lets you ask questions of a model (see'PDP and ICE plots' notebook to the right ). 2 algorithms to consider<br>
@@ -650,20 +650,31 @@
             <td class="style_white ">
                 <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_10/10_1_accuracy_precision_recall_f1_confusion.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong ><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_1_accuracy_precision_recall_f1_confusion.ipynb" target="_blank" >Precision/Recall, F1 Score, Confusion Matrix</a></strong> Goes with lecture to the left<br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/creditcard_small.csv">Small subset of Kaggle's credit card fraud dataset</a></strong> Goes with above notebook <br>
                 <br>
                 <!--EXAMPLES-Partial Dependence and Individual Conditional Expectation Plots https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html#sphx-glr-auto-examples-inspection-plot-partial-dependence-py
                     https://scikit-learn.org/stable/modules/partial_dependence.html -->
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_2_PermutationImportance.ipynb">Permutation importance (and RandomForestClassifier's built in feature importance)</a></strong>How to tell what the model thinks is imortant<br>
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_10/10_3_PDP_plots_ICE.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_10/10_3_PDP_plots_ICE.ipynb">PDP and ICE plots</a></strong><br>
-                <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/datasets/melb_data_cleaned.feather">Cleaned version of Melbourne housing dataset</a></strong> Goes with above notebook<br>
-                <br>
+
+
+                <!-- <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/datasets/melb_data_cleaned.feather">Cleaned version of Melbourne housing dataset</a></strong> Goes with above notebook<br>
+                <br> -->
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_11/11_1_BreastCancer_Classification_questions-INCLASS.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_11/11_1_BreastCancer_Classification_questions-INCLASS.ipynb">Breast cancer classifier-INCLASS </a></strong>Train a random forest classifier on breast cancer dataset.  Use Permutation importance, and PDP and ICE plots to determine when diagnosis changes<br>
+                
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_11/11_1_BreastCancer_Classification_questions.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_11/11_1_BreastCancer_Classification_questions.ipynb">Breast cancer classifier</a></strong>Solution to above<br>
+                
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_11/11_2_CarMPG_Regression_questions.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_11/11_2_CarMPG_Regression_questions.ipynb">Car MPG_Regressor</a></strong>Train a random forest regressor on car data.  Use Permutation importance, and PDP and ICE plots to see what effects mpg<br>
+                
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_11/11_3_treeinterpreter_regressor_classifier.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_11/11_3_treeinterpreter_regressor_classifier.ipynb">Treeinterpreter</a></strong>Using treeinterpreter to determine which features influenced a prediction, and to discover why 2 sets of predictions are different<br>
+                
+                <a  href="https://colab.research.google.com/github/CNUClasses/DATA301_CODE/blob/master/week_11/11_4_SHAP_regressor_classifier.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"</></a> 
                 <strong><a href="https://github.com/CNUClasses/DATA301_CODE/blob/master/week_11/11_4_SHAP_regressor_classifier.ipynb">SHAP</a></strong>Using SHAP to determine which features influenced a prediction.<br>
-              
  
                 
             </td>
